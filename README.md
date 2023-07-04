@@ -1,6 +1,6 @@
 # Maschinenbauschule Elberfeld
 
-
+Dies ist das Repository für die Digitalisierung, Erschließung, Transkription und ggf. Publikation (kurz:Datafizierung) der Schülerverzeichnisse der Maschinenbauschule Elberfeld, wie sie als Archivalien im Universitätsarchiv Wuppertal vorliegen.
 
 ## Getting started
 
