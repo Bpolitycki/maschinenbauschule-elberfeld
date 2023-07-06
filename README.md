@@ -2,6 +2,14 @@
 
 Dies ist das Repository für die Digitalisierung, Erschließung, Transkription und ggf. Publikation (kurz:Datafizierung) der Schülerverzeichnisse der Maschinenbauschule Elberfeld, wie sie als Archivalien im Universitätsarchiv Wuppertal vorliegen.
 
+## Zugang zur Transkribus Collection
+
+- Für den Zugang zu einer Transkribus Collection braucht man einen Transkribus-Account (denn kriegt man hier => https://readcoop.eu/).
+- Die für den Account verwendete Email-Adresse muss einem entsprechend berechtigten Nutzer der Collection mitgeteilt werden.  
+Für die Collection "Schüler der Maschinenbauschule" sind das:
+  - ...
+- Letztere können neue Nutzer (die einen Transkribus Account haben) über den "User Manager" mittels Email-Adresse finden und der Collection hinzufügen.
+
 ## Getting started
 
 To make it easy for you to get started with GitLab, here's a list of recommended next steps.
