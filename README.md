@@ -4,6 +4,7 @@ Dies ist das Repository für die Digitalisierung, Erschließung, Transkription u
 
 ## Zugang zur Transkribus Collection
 
+- die collection ist in der standalone-Version und im Browser (https://app.transkribus.eu/collection/217025) zugänglich
 - Für den Zugang zu einer Transkribus Collection braucht man einen Transkribus-Account (denn kriegt man hier => https://readcoop.eu/).
 - Die für den Account verwendete Email-Adresse muss einem entsprechend berechtigten Nutzer der Collection mitgeteilt werden.  
 Für die Collection "Schüler der Maschinenbauschule" sind das:
