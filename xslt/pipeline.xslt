@@ -15,17 +15,18 @@
     <xsl:import href="components.xslt"/>
     
     <xsl:param name="base-uri" as="xs:string"/>
+    <xsl:param name="data-dir" select="'data'" as="xs:string"/>
     <xsl:param name="page-title" as="xs:string" select="'Die Schülerverzeichnisse der Maschinenbauschule Elberfeld-Barmen'"/>
     
     <xsl:variable name="output-dir" as="xs:string" select="html:join-path(($base-uri, 'build'))"/>
     <xsl:variable name="output-dir-with-scheme" as="xs:string" select="'file:///' || $output-dir"/>
     
-    <xsl:variable name="pages" as="element(pages:pages)" select="doc('./pages.xml')/pages:pages"/>
+    <xsl:variable name="data-path" as="xs:string" select="'file:///' || html:join-path(($base-uri, $data-dir))"/>
     
-    <xsl:template match="/">
-        <xsl:message select="'Starting generation for ' || count($pages//pages:page) || ' page-elements:'"/>
+    <xsl:template match="pages:pages">
+        <xsl:message select="'Starting generation for ' || count(.//pages:page) || ' page-elements:'"/>
         <xsl:message select="'Placing output into: ' || $output-dir"/>
-        <xsl:for-each select="$pages/pages:page">
+        <xsl:for-each select="pages:page">
             <xsl:call-template name="create-pages">
                 <xsl:with-param name="page" as="element(pages:page)" select="."/>
                 <xsl:with-param name="path-base" as="xs:string" select="$output-dir-with-scheme"/>
@@ -88,6 +89,11 @@
     <xsl:function name="html:join-path" as="xs:string">
         <xsl:param name="components" as="xs:string+"/>
         <xsl:value-of select="string-join($components, '/')"/>
+    </xsl:function>
+    
+    <xsl:function name="html:load-data" as="document-node()+">
+        <xsl:param name="page" as="element(pages:page)"/>
+        <xsl:sequence select="tokenize($page/@data-src, ' ') ! doc(html:join-path(($data-path, .)))"/>
     </xsl:function>
     
 </xsl:stylesheet>

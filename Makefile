@@ -4,4 +4,4 @@ clean:
 	@rm -rf build
 
 html: clean
-	@saxon -s:data/Abt-1_Tiefbau_Band-1.xml -xsl:xslt/pipeline.xslt base-uri=$(shell pwd)
+	@saxon -s:xslt/pages.xml -xsl:xslt/pipeline.xslt base-uri=$(shell pwd)
