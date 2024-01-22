@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grammar xmlns="http://relaxng.org/ns/structure/1.0"
+    datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
+    ns="http://www.dh.uni-wuppertal/ns/schueler/pages">
+    <start>
+        <element name="pages">
+            <zeroOrMore>
+                <element name="page">
+                    <attribute name="key">
+                        <text/>
+                    </attribute>
+                    <optional>
+                        <attribute name="name">
+                            <text/>
+                        </attribute>
+                    </optional>
+                    <optional>
+                        <attribute name="menu-only">
+                            <value>true</value>
+                        </attribute>
+                    </optional>
+                    <zeroOrMore>
+                        <ref name="page"/>
+                    </zeroOrMore>
+                </element>
+            </zeroOrMore>
+        </element>
+    </start>
+    <define name="page">
+        <element name="page">
+            <attribute name="key">
+                <text/>
+            </attribute>
+            <optional>
+                <attribute name="name">
+                    <text/>
+                </attribute>
+            </optional>
+            <optional>
+                <attribute name="menu-only">
+                    <value>true</value>
+                </attribute>
+            </optional>
+            <zeroOrMore>
+                <ref name="page"/>
+            </zeroOrMore>
+        </element>
+    </define>
+</grammar>

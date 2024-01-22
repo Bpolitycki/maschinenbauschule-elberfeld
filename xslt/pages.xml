@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../schema/pages.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<pages xmlns="http://www.dh.uni-wuppertal/ns/schueler/pages">
+    <page key="/"/>
+    <page key="baende" name="Bände">
+        <page key="1_1" name="Band 1,1"/>
+        <page key="1_2" name="Band 1,2" menu-only="true"/>
+        <page key="2_1" name="Band 2,1" menu-only="true"/>
+        <page key="3_1" name="Band 3,1" menu-only="true"/>
+        <page key="3_2" name="Band 3,2" menu-only="true"/>
+    </page>
+    <page key="schueler" name="Schüler"/>
+    <page key="geburtsorte" name="Geburtsorte"/>
+    <page key="uebersichten" name="Übersichten">
+        <page key="studienverlaeufe" name="Studienverläufe"/>
+        <page key="konfessionen" name="Konfessionen"/>
+        <page key="geburtsjahre" name="Geburtsjahre"/>
+        <page key="vaeterberufe" name="Väterberufe"/>
+        <page key="vorbildung" name="Vorbildung"/>
+        <page key="wohnorte" name="Wohnorte"/>
+    </page>
+    <page key="about" name="About"/>
+</pages>
