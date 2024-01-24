@@ -14,7 +14,7 @@
     
     <xsl:import href="components.xslt"/>
     
-    <xsl:param name="base-uri" as="xs:string"/>
+    <xsl:param name="base-uri" as="xs:string" select="html:create-default-build-path(root())"/>
     <xsl:param name="data-dir" select="'data'" as="xs:string"/>
     <xsl:param name="page-title" as="xs:string" select="'Die Schülerverzeichnisse der Maschinenbauschule Elberfeld-Barmen'"/>
     
@@ -26,6 +26,7 @@
     <xsl:template match="pages:pages">
         <xsl:message select="'Starting generation for ' || count(.//pages:page) || ' page-elements:'"/>
         <xsl:message select="'Placing output into: ' || $output-dir"/>
+        <xsl:message select="'base-uri is: ' || $base-uri"/>
         <xsl:for-each select="pages:page">
             <xsl:call-template name="create-pages">
                 <xsl:with-param name="page" as="element(pages:page)" select="."/>
@@ -94,6 +95,11 @@
     <xsl:function name="html:load-data" as="document-node()+">
         <xsl:param name="page" as="element(pages:page)"/>
         <xsl:sequence select="tokenize($page/@data-src, ' ') ! doc(html:join-path(($data-path, .)))"/>
+    </xsl:function>
+    
+    <xsl:function name="html:create-default-build-path" as="xs:string">
+        <xsl:param name="context" as="document-node()"/>
+        <xsl:value-of select="substring-after(string-join((tokenize($context => document-uri(), '/')[position() lt last()]), '/') || '/..', ':')"/>
     </xsl:function>
     
 </xsl:stylesheet>
