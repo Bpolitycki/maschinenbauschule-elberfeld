@@ -26,7 +26,6 @@
     <xsl:template match="pages:pages">
         <xsl:message select="'Starting generation for ' || count(.//pages:page) || ' page-elements:'"/>
         <xsl:message select="'Placing output into: ' || $output-dir"/>
-        <xsl:message select="'base-uri is: ' || $base-uri"/>
         <xsl:for-each select="pages:page">
             <xsl:call-template name="create-pages">
                 <xsl:with-param name="page" as="element(pages:page)" select="."/>
@@ -99,7 +98,7 @@
     
     <xsl:function name="html:create-default-build-path" as="xs:string">
         <xsl:param name="context" as="document-node()"/>
-        <xsl:value-of select="substring-after(string-join((tokenize($context => document-uri(), '/')[position() lt last()]), '/') || '/..', ':')"/>
+        <xsl:value-of select="substring-after(string-join((tokenize($context => document-uri(), '/')[position() lt last()]), '/') || '/..', 'file:')"/>
     </xsl:function>
     
 </xsl:stylesheet>
