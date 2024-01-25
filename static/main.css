@@ -1,0 +1,16 @@
+@import url('https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css');
+
+footer {
+    background-color: #546e7a;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+footer p {
+    color: #fff;
+}
+
+footer img {
+    height: 6rem;
+}
