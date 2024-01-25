@@ -103,7 +103,7 @@
             </xsl:iterate>
         </xsl:variable>
         <xsl:variable name="up-segments" as="xs:string*" select="for $_ in 1 to count($source-segments) - $common-length - 1 return '..'"/>
-        <xsl:variable name="down-segments" as="xs:string+" select="$target-segments[position() gt $common-length]"/>
+        <xsl:variable name="down-segments" as="xs:string*" select="$target-segments[position() gt $common-length]"/>
         <xsl:sequence select="path:join(('.', $up-segments, $down-segments))"/>
     </xsl:function>
     
