@@ -28,3 +28,5 @@ Sofern `make` installiert ist, kann die Transformation auch mit dem folgenden Be
 ```bash
 make html
 ```
+
+**Achtung**: Wird kein `make` verwendet, muss der Ordner `static` manuell in den Ausgabeordner (`build`) kopiert werden.
