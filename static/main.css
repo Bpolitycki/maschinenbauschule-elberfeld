@@ -8,6 +8,12 @@
     --link: #039be5;
 }
 
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
 header a h1 {
     --font-size: 1.75rem;
     --typography-spacing-vertical: 2.625rem;
@@ -23,6 +29,7 @@ header nav li.not-active {
 }
 
 footer {
+    margin-top: auto;
     background-color: var(--primary);
     display: flex;
     justify-content: space-evenly;
