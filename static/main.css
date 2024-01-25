@@ -1,14 +1,36 @@
 @import url('https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css');
 
+:root {
+    --primary: #546e7a !important;
+    --primary-hover: #607d8b;
+    --primary-focus: rgba(84, 110, 122, 0.25);
+    --primary-inverse: #FFF;
+    --link: #039be5;
+}
+
+header a h1 {
+    --font-size: 1.75rem;
+    --typography-spacing-vertical: 2.625rem;
+}
+
+header a:hover, header a h1:hover {
+    color: var(--link);
+    text-decoration: none;
+}
+
+header nav li.not-active {
+    opacity: 0.75;
+}
+
 footer {
-    background-color: #546e7a;
+    background-color: var(--primary);
     display: flex;
     justify-content: space-evenly;
     align-items: center;
 }
 
 footer p {
-    color: #fff;
+    color: var(--primary-inverse);
 }
 
 footer img {
