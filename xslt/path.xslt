@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsl:stylesheet
+    xmlns:map="http://www.w3.org/2005/xpath-functions/map"
+    xmlns:pages="http://www.dh.uni-wuppertal/ns/schueler/pages"
+    xmlns:path="http://www.dh.uni-wuppertal/ns/schueler/path"
+    xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:tei="http://www.tei-c.org/ns/1.0"
+    exclude-result-prefixes="#all"
+    version="3.0">
+    
+    <!--
+         Create a file- or directory-name from a page element.
+         
+         @param $page The page element.
+         @param $output-dir The directory where the file should be created.
+         @return The file- or directory-name.
+    -->
+    <xsl:function name="path:construct-file-name" as="xs:string">
+        <xsl:param name="page" as="element(pages:page)"/>
+        <xsl:param name="output-dir" as="xs:string"/>
+        <xsl:variable name="path" as="xs:string">
+            <xsl:choose>
+                <xsl:when test="$page/@key = '/' and not($page/@name)">
+                    <xsl:value-of select="path:join(($output-dir, 'index.html'))"/>
+                </xsl:when>
+                <xsl:when test="$page/pages:page">
+                    <xsl:value-of select="path:join(($output-dir, $page/@key))"/>
+                </xsl:when>
+                <xsl:otherwise>
+                    <xsl:value-of select="path:join(($output-dir, $page/@key, 'index.html'))"/>
+                </xsl:otherwise>
+            </xsl:choose>
+        </xsl:variable>
+        <xsl:sequence select="$path"/>
+    </xsl:function>
+    
+    <!--
+         Simple function to join path components.
+         
+         @param $components The path components as xs:string+.
+         @return The joined path.
+    -->
+    <xsl:function name="path:join" as="xs:string">
+        <xsl:param name="components" as="xs:string+"/>
+        <xsl:value-of select="string-join($components, '/')"/>
+    </xsl:function>
+    
+    <!--
+         Load one or more documents from the data-src attribute of a page element.
+         
+         @param $data-src-path The path used as a base for data loading.
+         @param $page The page element.
+         @return The loaded documents as document-node()+.
+    -->
+    <xsl:function name="path:load" as="document-node()+">
+        <xsl:param name="data-src-path" as="xs:string"/>
+        <xsl:param name="page" as="element(pages:page)"/>
+        <xsl:sequence select="tokenize($page/@data-src, ' ') ! (path:join(($data-src-path, .)) => doc())"/>
+    </xsl:function>
+    
+    <!--
+         Create a path to the build directory from the context of the current document.
+         The build directory is always ../build relative to the input document, when
+         this function is called.
+         
+         @param $context The context of the current document.
+         @return The path to the build directory.
+    -->
+    <xsl:function name="path:create-default-build-path" as="xs:string">
+        <xsl:param name="context" as="document-node()"/>
+        <xsl:variable name="doc-uri" as="xs:anyURI" select="document-uri($context)"/>
+        <xsl:value-of select="path:join((xs:string($doc-uri) => path:extract-filename-and-dir() => map:get('dir'), '..'))"/>
+    </xsl:function>
+    
+    <!--
+         Create a relative path from a source path to a target path.
+         
+         @param $source-path The source path.
+         @param $target-path The target path.
+         @return The relative path from the source path to the target path.
+    -->
+    <xsl:function name="path:get-relative-path" as="xs:string">
+        <xsl:param name="source-path" as="xs:string"/>
+        <xsl:param name="target-path" as="xs:string"/>
+        <xsl:variable name="source-segments" as="xs:string*" select="path:tokenize($source-path)"/>
+        <xsl:variable name="target-segments" as="xs:string*" select="path:tokenize($target-path)"/>
+        <xsl:variable name="common-length" as="xs:integer">
+            <xsl:iterate select="$source-segments">
+                <xsl:param name="index" as="xs:integer" select="1"/>
+                <xsl:on-completion select="$index"/>
+                <xsl:choose>
+                    <xsl:when test="exists($target-segments[$index]) and . = $target-segments[$index]">
+                        <xsl:next-iteration>
+                            <xsl:with-param name="index" select="$index + 1"/>
+                        </xsl:next-iteration>
+                    </xsl:when>
+                    <xsl:otherwise>
+                        <xsl:break select="$index - 1"/>
+                    </xsl:otherwise>
+                </xsl:choose>
+                
+            </xsl:iterate>
+        </xsl:variable>
+        <xsl:variable name="up-segments" as="xs:string*" select="for $_ in 1 to count($source-segments) - $common-length - 1 return '..'"/>
+        <xsl:variable name="down-segments" as="xs:string+" select="$target-segments[position() gt $common-length]"/>
+        <xsl:sequence select="path:join(('.', $up-segments, $down-segments))"/>
+    </xsl:function>
+    
+    <!--
+         Extract the filename and the directory from a path.
+         
+         @param $input-path The path from which the filename and the directory should be extracted.
+         @return A map containing the filename and the directory.
+    -->
+    <xsl:function name="path:extract-filename-and-dir" as="map(xs:string, xs:string)">
+        <xsl:param name="input-path" as="xs:string"/>
+        <xsl:variable name="components" as="xs:string*" select="path:tokenize($input-path)"/>
+        <xsl:sequence>
+            <xsl:map>
+                <xsl:map-entry key="'filename'" select="$components[last()]"/>
+                <xsl:map-entry key="'dir'" select="path:join($components[position() lt last()])"/>
+            </xsl:map>
+        </xsl:sequence>
+    </xsl:function>
+    
+    <!--
+         Tokenize a path.
+         
+         @param $input-path The path to be tokenized.
+         @return The tokens of the path.
+    -->
+    <xsl:function name="path:tokenize" as="xs:string*">
+        <xsl:param name="input-path" as="xs:string"/>
+        <xsl:sequence>
+            <xsl:for-each select="path:remove-file-scheme($input-path) => tokenize('/')">
+                <xsl:if test="normalize-space(.) != ''">
+                    <xsl:value-of select="."/>
+                </xsl:if>
+            </xsl:for-each>
+        </xsl:sequence>
+    </xsl:function>
+    
+    <!--
+         Add a file scheme to a path.
+         
+         @param $input-path The path to which the file scheme should be added.
+         @return The path with the file scheme.
+    -->
+    <xsl:function name="path:add-file-scheme" as="xs:string">
+        <xsl:param name="input-path" as="xs:string"/>
+        <xsl:value-of select="'file://' || $input-path"/>
+    </xsl:function>
+    
+    
+    <!--
+         Remove a file scheme from a path.
+         
+         @param $input-path The path from which the file scheme should be removed.
+         @return The path without the file scheme.
+    -->
+    <xsl:function name="path:remove-file-scheme" as="xs:string">
+        <xsl:param name="input-path" as="xs:string"/>
+        <xsl:value-of select="$input-path => replace('^file://(.*)', '$1')"/>
+    </xsl:function>
+    
+    
+    
+    
+</xsl:stylesheet>
