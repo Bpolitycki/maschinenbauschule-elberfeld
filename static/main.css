@@ -14,22 +14,42 @@ body {
     min-height: 100vh;
 }
 
-header a h1 {
-    --font-size: 1.75rem;
-    --typography-spacing-vertical: 2.625rem;
+header.nav-header {
+    padding-top: 1.5rem;
 }
 
-header a:hover, header a h1:hover {
+header.nav-header a h1 {
+    --font-size: 1.25rem;
+    --typography-spacing-vertical: 2.625rem;
+    margin-bottom: 0.5rem;
+    font-family: monospace;
+}
+
+header.nav-header a:hover, header a h1:hover {
     color: var(--link);
     text-decoration: none;
 }
 
-header nav li.not-active {
+header.nav-header nav li.not-active {
     opacity: 0.75;
+}
+
+nav.index-nav {
+    border-bottom: 1px solid var(--primary);
+    margin-bottom: 1.5rem;
+}
+
+h3.index-subheader {
+    margin-bottom: 1rem;
+}
+
+li:has(a) {
+    cursor: pointer;
 }
 
 footer {
     margin-top: auto;
+    height: 10rem;
     background-color: var(--primary);
     display: flex;
     justify-content: space-evenly;
@@ -41,5 +61,5 @@ footer p {
 }
 
 footer img {
-    height: 6rem;
+    height: 4.5rem;
 }
