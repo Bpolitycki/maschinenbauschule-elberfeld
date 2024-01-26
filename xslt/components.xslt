@@ -52,7 +52,7 @@
         <xsl:param name="context-file" as="xs:string"/>
         <xsl:param name="pages" as="element(pages:pages)"/>
         <xsl:sequence>
-            <header class="container">
+            <header class="container nav-header">
                 <a href="{path:get-relative-path($context-file, path:join(($output-dir, 'index.html')))}" title="Zur Startseite">
                     <h1>
                         <xsl:value-of select="$title"/>
