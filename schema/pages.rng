@@ -14,11 +14,6 @@
             <attribute name="key">
                 <text/>
             </attribute>
-            <optional>
-                <attribute name="name">
-                    <text/>
-                </attribute>
-            </optional>
             <choice>
                 <choice>
                     <attribute name="menu-only">
@@ -34,6 +29,11 @@
                     <ref name="page"/>
                 </zeroOrMore>
             </choice>
+            <optional>
+                <attribute name="name">
+                    <text/>
+                </attribute>
+            </optional>
         </element>
     </define>
 </grammar>
