@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet xmlns:map="http://www.w3.org/2005/xpath-functions/map"
-    xmlns:pages="http://www.dh.uni-wuppertal/ns/schueler/pages"
-    xmlns:path="http://www.dh.uni-wuppertal/ns/schueler/path"
-    xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xs="http://www.w3.org/2001/XMLSchema"
-    xmlns:tei="http://www.tei-c.org/ns/1.0" exclude-result-prefixes="#all" version="3.0">
-
+                xmlns:pages="http://www.dh.uni-wuppertal/ns/schueler/pages"
+                xmlns:path="http://www.dh.uni-wuppertal/ns/schueler/path"
+                xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+                xmlns:tei="http://www.tei-c.org/ns/1.0" exclude-result-prefixes="#all" version="3.0">
+    
     <!--
          Create a file- or directory-name from a page element.
          
@@ -17,7 +17,7 @@
         <xsl:param name="output-dir" as="xs:string"/>
         <xsl:variable name="path" as="xs:string">
             <xsl:choose>
-                <xsl:when test="$page/@key = '/' and not($page/@name)">
+                <xsl:when test="$page/@key = '/'">
                     <xsl:value-of select="path:join(($output-dir, 'index.html'))"/>
                 </xsl:when>
                 <xsl:when test="$page/pages:page">
@@ -30,7 +30,7 @@
         </xsl:variable>
         <xsl:sequence select="$path"/>
     </xsl:function>
-
+    
     <!--
          Simple function to join path components.
          
@@ -41,15 +41,15 @@
         <xsl:param name="components" as="xs:string+"/>
         <xsl:value-of select="string-join($components, '/')"/>
     </xsl:function>
-
-    <!-- 
-        Load all data documents from a data-src-path, which are
-        listed in a pages:pages-element. 
-        
-        @param $data-src-path The path used as a base for data loading.
-        @param $pages The pages structure as element(pages:pages).
-        @return The loaded documents as map(xs:string, document-node())
-     -->
+    
+    <!--
+         Load all data documents from a data-src-path, which are
+         listed in a pages:pages-element.
+         
+         @param $data-src-path The path used as a base for data loading.
+         @param $pages The pages structure as element(pages:pages).
+         @return The loaded documents as map(xs:string, document-node())
+    -->
     <xsl:function name="path:load-documents" as="map(xs:string, document-node())">
         <xsl:param name="data-src-path" as="xs:string"/>
         <xsl:param name="pages" as="element(pages:pages)"/>
@@ -58,14 +58,14 @@
         <xsl:variable name="documents" as="document-node()+"
             select="path:load($data-src-path, $names)"/>
         <xsl:sequence select="
-                for-each-pair(
-                    $names, $documents, 
-                    function ($name as xs:string, $document as document-node()) as map(xs:string, document-node()) {
-                        map {$name: $document}
-                    }
-               ) => map:merge()"/>
+            for-each-pair(
+                $names, $documents,
+                function ($name as xs:string, $document as document-node()) as map(xs:string, document-node()) {
+                    map {$name: $document}
+                }
+            ) => map:merge()"/>
     </xsl:function>
-
+    
     <!--
          Load one or more documents from a src-path by a given name.
          
@@ -73,13 +73,13 @@
          @param $name One or more names of documents to load.
          @return The loaded documents as document-node()+.
     -->
-
+    
     <xsl:function name="path:load" as="document-node()+">
         <xsl:param name="data-src-path" as="xs:string"/>
         <xsl:param name="name" as="xs:string+"/>
         <xsl:sequence select="$name ! (path:join(($data-src-path, .)) => doc())"/>
     </xsl:function>
-
+    
     <!--
          Create a path to the build directory from the context of the current document.
          The build directory is always ../build relative to the input document, when
@@ -93,9 +93,9 @@
         <xsl:variable name="doc-uri" as="xs:anyURI" select="document-uri($context)"/>
         <xsl:value-of
             select="path:join((xs:string($doc-uri) => path:extract-filename-and-dir() => map:get('dir'), '..'))"
-        />
+            />
     </xsl:function>
-
+    
     <!--
          Create a relative path from a source path to a target path.
          
@@ -107,7 +107,7 @@
         <xsl:param name="source-path" as="xs:string"/>
         <xsl:param name="target-path" as="xs:string"/>
         <xsl:variable name="source-segments" as="xs:string*" select="path:tokenize($source-path)"/>
-        <xsl:variable name="target-segments" as="xs:string*" select="path:tokenize($target-path)"/>
+        <xsl:variable name="target-segments" as="xs:string*" select="path:tokenize($target-path)"/>        
         <xsl:variable name="common-length" as="xs:integer">
             <xsl:iterate select="$source-segments">
                 <xsl:param name="index" as="xs:integer" select="1"/>
@@ -126,14 +126,14 @@
             </xsl:iterate>
         </xsl:variable>
         <xsl:variable name="up-segments" as="xs:string*" select="
-                for $_ in 1 to count($source-segments) - $common-length - 1
-                return
-                    '..'"/>
+            for $_ in 1 to count($source-segments) - $common-length - 1
+            return
+                '..'"/>
         <xsl:variable name="down-segments" as="xs:string*"
             select="$target-segments[position() gt $common-length]"/>
         <xsl:sequence select="path:join(('.', $up-segments, $down-segments))"/>
     </xsl:function>
-
+    
     <!--
          Extract the filename and the directory from a path.
          
@@ -161,7 +161,7 @@
         <xsl:param name="input" as="xs:string"/>
         <xsl:sequence select="matches($input, '^.*\.\w+$')"/>
     </xsl:function>
-
+    
     <!--
          Tokenize a path.
          
@@ -178,7 +178,7 @@
             </xsl:for-each>
         </xsl:sequence>
     </xsl:function>
-
+    
     <!--
          Add a file scheme to a path.
          
@@ -189,7 +189,7 @@
         <xsl:param name="input-path" as="xs:string"/>
         <xsl:value-of select="'file://' || $input-path"/>
     </xsl:function>
-
+    
     <!--
          Remove a file scheme from a path.
          
