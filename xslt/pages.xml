@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../schema/pages.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <pages xmlns="http://www.dh.uni-wuppertal/ns/schueler/pages">
-    <page key="/"/>
+    <page key="/" name="index"/>
     <page key="baende" name="Bände">
         <page key="1_1" name="Band 1,1" data-src="Abt-1_Tiefbau_Band-1.xml"/>
         <page key="1_2" name="Band 1,2" menu-only="true"/>
