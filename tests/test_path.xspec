@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description xmlns:map="http://www.w3.org/2005/xpath-functions/map"
+    xmlns:x="http://www.jenitennison.com/xslt/xspec"
+    xmlns:path="http://www.dh.uni-wuppertal/ns/schueler/path"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema" stylesheet="./../xslt/path.xslt">
+
+    <x:scenario label="calling path:extract-filename-and-dir">
+        <x:scenario label="on a path with a filename both components">
+            <x:call function="path:extract-filename-and-dir">
+                <x:param select="'/bar/foo.html'" name="input-path" as="xs:string"/>
+            </x:call>
+            <x:expect label="should be extracted as expected"
+                select="map{'filename': 'foo.html', 'dir': 'bar'}" as="map(xs:string, xs:string?)"/>
+        </x:scenario>
+        <x:scenario label="on a path without a filename">
+            <x:call function="path:extract-filename-and-dir">
+                <x:param select="'/bar/foo'" name="input-path" as="xs:string"/>
+            </x:call>
+            <x:expect label="filename should be an empty-sequence"
+                select="map{'filename': (), 'dir': 'bar/foo'}" as="map(xs:string, xs:string?)"/>
+        </x:scenario>
+    </x:scenario>
+
+    <x:scenario label="calling path:is-file">
+        <x:scenario label="with a string as input, which is a filename, it should be">
+            <x:call function="path:is-file">
+                <x:param select="'foo.html'" name="input" as="xs:string"/>
+            </x:call>
+            <x:expect label="identified as file" select="true()" as="xs:boolean"/>
+        </x:scenario>
+
+        <x:scenario label="with a simple string as input it should">
+            <x:call function="path:is-file">
+                <x:param select="'foo'" name="input" as="xs:string"/>
+            </x:call>
+            <x:expect label="identified as regular string" select="false()" as="xs:boolean"/>
+        </x:scenario>
+    </x:scenario>
+</x:description>

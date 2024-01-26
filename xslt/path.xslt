@@ -111,17 +111,29 @@
          Extract the filename and the directory from a path.
          
          @param $input-path The path from which the filename and the directory should be extracted.
-         @return A map containing the filename and the directory.
+         @return A map containing the filename and the directory. Where filename may be an empty-sequence()
     -->
-    <xsl:function name="path:extract-filename-and-dir" as="map(xs:string, xs:string)">
+    <xsl:function name="path:extract-filename-and-dir" as="map(xs:string, xs:string?)">
         <xsl:param name="input-path" as="xs:string"/>
         <xsl:variable name="components" as="xs:string*" select="path:tokenize($input-path)"/>
         <xsl:sequence>
             <xsl:map>
-                <xsl:map-entry key="'filename'" select="$components[last()]"/>
-                <xsl:map-entry key="'dir'" select="path:join($components[position() lt last()])"/>
+                <xsl:map-entry key="'filename'" select="$components[last()][path:is-file(.)]"/>
+                <xsl:map-entry key="'dir'" select="path:join($components[position() lt last() or not(path:is-file(.))])"/>
             </xsl:map>
         </xsl:sequence>
+    </xsl:function>
+    
+    
+    <!--
+         Determine if a string is / may be a filename
+         
+         @param $input The to check.
+         @return true() if the input is a filenemae otherwise false()
+    -->
+    <xsl:function name="path:is-file" as="xs:boolean">
+        <xsl:param name="input" as="xs:string"/>
+        <xsl:sequence select="matches($input, '^.*\.\w+$')"/>
     </xsl:function>
     
     <!--
