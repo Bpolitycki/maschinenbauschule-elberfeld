@@ -134,21 +134,20 @@
         </xsl:sequence>
     </xsl:function>
     
-    <xsl:function name="html-components:create-page" as="element(html:html)">
+    <xsl:template name="html-components:create-page">
         <xsl:param name="page-head" as="element(html:head)"/>
         <xsl:param name="nav" as="element(html:header)"/>
         <xsl:param name="content" as="element()"/>
         <xsl:param name="footer" as="element(html:footer)"/>
-        <xsl:sequence>
-            <html>
-                <xsl:sequence select="$page-head"/>
-                <body>
-                    <xsl:sequence select="($nav, $content, $footer)"/>
-                </body>
-            </html>
-        </xsl:sequence>
-        
-    </xsl:function>
+        <html>
+            <xsl:sequence select="$page-head"/>
+            <body>
+                <xsl:sequence select="($nav, $content, $footer)"/>
+            </body>
+        </html>
+    </xsl:template>
+    
+    
     
     
     
