@@ -21,10 +21,10 @@
                     <xsl:value-of select="path:join(($output-dir, 'index.html'))"/>
                 </xsl:when>
                 <xsl:when test="$page/pages:page">
-                    <xsl:value-of select="path:join(($output-dir, $page/@key))"/>
+                    <xsl:value-of select="path:join(($output-dir, encode-for-uri($page/@key)))"/>
                 </xsl:when>
                 <xsl:otherwise>
-                    <xsl:value-of select="path:join(($output-dir, $page/@key, 'index.html'))"/>
+                    <xsl:value-of select="path:join(($output-dir, encode-for-uri($page/@key), 'index.html'))"/>
                 </xsl:otherwise>
             </xsl:choose>
         </xsl:variable>
@@ -199,5 +199,10 @@
     <xsl:function name="path:remove-file-scheme" as="xs:string">
         <xsl:param name="input-path" as="xs:string"/>
         <xsl:value-of select="$input-path => replace('^file://(.*)', '$1')"/>
+    </xsl:function>
+    
+    <xsl:function name="path:make-absolute" as="xs:string">
+        <xsl:param name="input-path" as="xs:string"/>
+        <xsl:sequence select="if ($input-path => starts-with('/')) then $input-path else '/' || $input-path"/>
     </xsl:function>
 </xsl:stylesheet>
