@@ -3,3 +3,8 @@
 .vscode/
 build/
 tests/test_*-result.html
+
+# Python
+__pycache__/
+venv/
+.venv
