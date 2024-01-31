@@ -34,8 +34,8 @@
                 <meta charset="UTF-8"/>
                 <xsl:for-each select="$style-files">
                     <xsl:choose>
-                        <xsl:when test="$style-files => starts-with('http')">
-                            <link rel="stylesheet" href="{$style-files}"/>
+                        <xsl:when test=". => starts-with('http')">
+                            <link rel="stylesheet" href="{.}"/>
                         </xsl:when>
                         <xsl:otherwise>
                             <link rel="stylesheet" href="{path:get-relative-path($context-file, .)}"/>
@@ -164,7 +164,7 @@
         <xsl:param name="page-head" as="element(html:head)"/>
         <xsl:param name="nav" as="element(html:header)"/>
         <xsl:param name="content" as="element()"/>
-        <xsl:param name="footer" as="element(html:footer)"/>
+        <xsl:param name="footer" as="element()+"/>
         <html>
             <xsl:sequence select="$page-head"/>
             <body>

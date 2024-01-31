@@ -63,3 +63,12 @@ footer p {
 footer img {
     height: 4.5rem;
 }
+
+#map {
+    height: 85vh;
+}
+
+#map .leaflet-control a {
+    border-radius: 0;
+    padding: 0;
+}
