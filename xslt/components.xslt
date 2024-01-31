@@ -121,9 +121,34 @@
         </xsl:sequence>
     </xsl:function>
     
+    <!--
+         Creates the footer component without scripts.
+         
+         @param $context-file The file that is the context for the page as xs:string
+         @param $image-path The path to the image directory as xs:string
+         @return The footer as element(html:footer)
+    -->
     <xsl:function name="html-components:create-footer" as="element(html:footer)">
         <xsl:param name="context-file" as="xs:string"/>
         <xsl:param name="image-path" as="xs:string*"/>
+        <xsl:sequence>
+            <xsl:sequence select="html-components:create-footer($context-file, $image-path, ())"/>
+        </xsl:sequence>
+    </xsl:function>
+    
+    
+    <!--
+         Creates the footer component with scripts.
+         
+         @param $context-file The file that is the context for the page as xs:string
+         @param $image-path The path to the image directory as xs:string
+         @param $scripts A sequence of script elements as element(html:script)*
+         @return The footer as element(html:footer)
+    -->
+    <xsl:function name="html-components:create-footer" as="element()+">
+        <xsl:param name="context-file" as="xs:string"/>
+        <xsl:param name="image-path" as="xs:string*"/>
+        <xsl:param name="scripts" as="element(html:script)*"/>
         <xsl:sequence>
             <footer class="container-fluid">
                 <p>Letzte Änderung: <xsl:value-of select="format-date(current-date(), '[D01].[M01].[Y0001]')"/></p>
@@ -131,6 +156,7 @@
                     <img src="{path:get-relative-path($context-file, path:join(($image-path, 'buw_logo.png')))}" alt="Logo der BUW"/>
                 </a>
             </footer>
+            <xsl:sequence select="$scripts"/>
         </xsl:sequence>
     </xsl:function>
     
