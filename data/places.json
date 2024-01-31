@@ -1,0 +1,2270 @@
+[
+  {
+    "name": "Aachen",
+    "place_id": "place-53528846",
+    "lat": "50.753889",
+    "long": "6.241944",
+    "found_at_retry": true
+  },
+  {
+    "name": "Ahaus",
+    "place_id": "place-63224088",
+    "lat": "52.066667",
+    "long": "7",
+    "found_at_retry": true
+  },
+  {
+    "name": "Ahausen",
+    "place_id": "place-37397840",
+    "lat": "50.5",
+    "long": "8.283333",
+    "found_at_retry": false
+  },
+  {
+    "name": "Ahnsen",
+    "place_id": "place-12267713",
+    "lat": "52.266667",
+    "long": "9.1",
+    "found_at_retry": false
+  },
+  {
+    "name": "Alfeld",
+    "place_id": "place-55321208",
+    "lat": "49.433333",
+    "long": "11.55",
+    "found_at_retry": false
+  },
+  {
+    "name": "Alstaden",
+    "place_id": "place-27968271",
+    "lat": "51.466667",
+    "long": "6.833333",
+    "found_at_retry": false
+  },
+  {
+    "name": "Altena",
+    "place_id": "place-64191407",
+    "lat": "51.216667",
+    "long": "3.316667",
+    "found_at_retry": true
+  },
+  {
+    "name": "Altenkessel",
+    "place_id": "place-53429277",
+    "lat": "49.25",
+    "long": "6.916667",
+    "found_at_retry": false
+  },
+  {
+    "name": "Altenkirchen",
+    "place_id": "place-90500720",
+    "lat": "50.779167",
+    "long": "7.75",
+    "found_at_retry": true
+  },
+  {
+    "name": "Altona",
+    "place_id": "place-42381688",
+    "lat": "41.35",
+    "long": "-85.15",
+    "found_at_retry": false
+  },
+  {
+    "name": "Arnsberg",
+    "place_id": "place-53768590",
+    "lat": "37.5667",
+    "long": "-89.7667",
+    "found_at_retry": true
+  },
+  {
+    "name": "Arnstadt",
+    "place_id": "place-81416026",
+    "lat": "50.833333",
+    "long": "10.95",
+    "found_at_retry": true
+  },
+  {
+    "name": "Arolsen",
+    "place_id": "place-57304494",
+    "lat": "51.366667",
+    "long": "9.016667",
+    "found_at_retry": true
+  },
+  {
+    "name": "Asbach",
+    "place_id": "place-53287643",
+    "lat": "51.283333",
+    "long": "10.033333",
+    "found_at_retry": false
+  },
+  {
+    "name": "Baak",
+    "place_id": "place-40342851",
+    "lat": "51.416667",
+    "long": "7.166667",
+    "found_at_retry": false
+  },
+  {
+    "name": "Bad Oeynhausen",
+    "place_id": "place-53805990",
+    "lat": "52.2",
+    "long": "8.8",
+    "found_at_retry": true
+  },
+  {
+    "name": "Barby",
+    "place_id": "place-67053640",
+    "lat": "51.966667",
+    "long": "11.883333",
+    "found_at_retry": false
+  },
+  {
+    "name": "Barh\u00f6ft",
+    "place_id": "place-46272764",
+    "lat": "54.433333",
+    "long": "13.033333",
+    "found_at_retry": false
+  },
+  {
+    "name": "Barmen",
+    "place_id": "place-82609667",
+    "lat": "51.283333",
+    "long": "7.216667",
+    "found_at_retry": true
+  },
+  {
+    "name": "Basel",
+    "place_id": "place-69051122",
+    "lat": "30.7333",
+    "long": "-91.3333",
+    "found_at_retry": false
+  },
+  {
+    "name": "Bechterdissen",
+    "place_id": "place-89135105",
+    "lat": "52",
+    "long": "8.666667",
+    "found_at_retry": false
+  },
+  {
+    "name": "Beerfelden",
+    "place_id": "place-99930017",
+    "lat": "49.566944",
+    "long": "8.974722",
+    "found_at_retry": false
+  },
+  {
+    "name": "Belum",
+    "place_id": "place-83485333",
+    "lat": "15.1",
+    "long": "78.1",
+    "found_at_retry": false
+  },
+  {
+    "name": "Berleburg",
+    "place_id": "place-97199161",
+    "lat": "51.05",
+    "long": "8.4",
+    "found_at_retry": false
+  },
+  {
+    "name": "Berlin",
+    "place_id": "place-86302914",
+    "lat": "41.3167",
+    "long": "-82.4833",
+    "found_at_retry": true
+  },
+  {
+    "name": "Beyenburg",
+    "place_id": "place-89335662",
+    "lat": "51.25",
+    "long": "7.3",
+    "found_at_retry": false
+  },
+  {
+    "name": "Blankenheim",
+    "place_id": "place-48007746",
+    "lat": "51.516667",
+    "long": "11.416667",
+    "found_at_retry": false
+  },
+  {
+    "name": "Blombach",
+    "place_id": "place-97429196",
+    "lat": "51.233333",
+    "long": "7.216667",
+    "found_at_retry": false
+  },
+  {
+    "name": "Bochum",
+    "place_id": "place-95087786",
+    "lat": "-23.2833",
+    "long": "29.1167",
+    "found_at_retry": true
+  },
+  {
+    "name": "Bockenheim",
+    "place_id": "place-35545534",
+    "lat": "50.116667",
+    "long": "8.65",
+    "found_at_retry": false
+  },
+  {
+    "name": "Boisheim",
+    "place_id": "place-23331623",
+    "lat": "51.266667",
+    "long": "6.266667",
+    "found_at_retry": false
+  },
+  {
+    "name": "Borbeck",
+    "place_id": "place-62664641",
+    "lat": "51.483333",
+    "long": "6.95",
+    "found_at_retry": false
+  },
+  {
+    "name": "Brackwede",
+    "place_id": "place-90143070",
+    "lat": "51.983333",
+    "long": "8.516667",
+    "found_at_retry": false
+  },
+  {
+    "name": "Bramsche",
+    "place_id": "place-50620096",
+    "lat": "52.4",
+    "long": "7.983333",
+    "found_at_retry": false
+  },
+  {
+    "name": "Braunschweig",
+    "place_id": "place-63949050",
+    "lat": "-32.7833",
+    "long": "27.3833",
+    "found_at_retry": true
+  },
+  {
+    "name": "Breslau",
+    "place_id": "place-35774658",
+    "lat": "42.35",
+    "long": "-97.6833",
+    "found_at_retry": true
+  },
+  {
+    "name": "Broich",
+    "place_id": "place-13545503",
+    "lat": "51.416667",
+    "long": "6.85",
+    "found_at_retry": false
+  },
+  {
+    "name": "Bruckhausen",
+    "place_id": "place-63747129",
+    "lat": "51.483333",
+    "long": "6.733333",
+    "found_at_retry": false
+  },
+  {
+    "name": "Br\u00fcgge",
+    "place_id": "place-94680356",
+    "lat": "53.25",
+    "long": "12.25",
+    "found_at_retry": false
+  },
+  {
+    "name": "Br\u00fcninghausen",
+    "place_id": "place-86152855",
+    "lat": "51.216667",
+    "long": "7.683333",
+    "found_at_retry": false
+  },
+  {
+    "name": "Br\u00fcssel",
+    "place_id": "place-75233171",
+    "lat": "50.233333",
+    "long": "6.183333",
+    "found_at_retry": true
+  },
+  {
+    "name": "Buchhorst",
+    "place_id": "place-91202079",
+    "lat": "52.883333",
+    "long": "11.116667",
+    "found_at_retry": false
+  },
+  {
+    "name": "Burscheid",
+    "place_id": "place-68592461",
+    "lat": "50.033333",
+    "long": "6.35",
+    "found_at_retry": false
+  },
+  {
+    "name": "Burtscheid",
+    "place_id": "place-84558442",
+    "lat": "49.733333",
+    "long": "6.95",
+    "found_at_retry": false
+  },
+  {
+    "name": "Capellen",
+    "place_id": "place-89762986",
+    "lat": "49.6333",
+    "long": "6",
+    "found_at_retry": false
+  },
+  {
+    "name": "Carnap",
+    "place_id": "place-90102275",
+    "lat": "51.283333",
+    "long": "7.183333",
+    "found_at_retry": false
+  },
+  {
+    "name": "Celle",
+    "place_id": "place-64992035",
+    "lat": "40.1",
+    "long": "15.4",
+    "found_at_retry": true
+  },
+  {
+    "name": "Charlottenburg",
+    "place_id": "place-2448106",
+    "lat": "52.5167",
+    "long": "13.2667",
+    "found_at_retry": true
+  },
+  {
+    "name": "Chemnitz",
+    "place_id": "place-14442848",
+    "lat": "50.666667",
+    "long": "12.75",
+    "found_at_retry": false
+  },
+  {
+    "name": "Coblenz",
+    "place_id": "place-34405467",
+    "lat": "51.2",
+    "long": "14.283333",
+    "found_at_retry": true
+  },
+  {
+    "name": "Coburg",
+    "place_id": "place-26465824",
+    "lat": "37.2",
+    "long": "-85.3333",
+    "found_at_retry": false
+  },
+  {
+    "name": "Crefeld",
+    "place_id": "place-22884653",
+    "lat": "51.333333",
+    "long": "6.566667",
+    "found_at_retry": true
+  },
+  {
+    "name": "Cronenberg",
+    "place_id": "place-60942454",
+    "lat": "49.65",
+    "long": "7.616667",
+    "found_at_retry": false
+  },
+  {
+    "name": "Dahlerau",
+    "place_id": "place-22863515",
+    "lat": "51.233333",
+    "long": "7.283333",
+    "found_at_retry": false
+  },
+  {
+    "name": "Dahlerbr\u00fcck",
+    "place_id": "place-62417287",
+    "lat": "51.25",
+    "long": "7.516667",
+    "found_at_retry": false
+  },
+  {
+    "name": "Dambach",
+    "place_id": "place-89842469",
+    "lat": "49.633333",
+    "long": "7.133333",
+    "found_at_retry": false
+  },
+  {
+    "name": "Darmstadt",
+    "place_id": "place-19868952",
+    "lat": "38.3167",
+    "long": "-89.7167",
+    "found_at_retry": true
+  },
+  {
+    "name": "Deezb\u00fcll",
+    "place_id": "place-23605282",
+    "lat": "54.783333",
+    "long": "8.816667",
+    "found_at_retry": false
+  },
+  {
+    "name": "Dessau",
+    "place_id": "place-43597493",
+    "lat": "51.830278",
+    "long": "12.379722",
+    "found_at_retry": true
+  },
+  {
+    "name": "Detmold",
+    "place_id": "place-52280333",
+    "lat": "51.8",
+    "long": "8",
+    "found_at_retry": true
+  },
+  {
+    "name": "Deutz",
+    "place_id": "place-62805932",
+    "lat": "50.933333",
+    "long": "6.983333",
+    "found_at_retry": false
+  },
+  {
+    "name": "Dillenburg",
+    "place_id": "place-41631545",
+    "lat": "50.733333",
+    "long": "8.283333",
+    "found_at_retry": false
+  },
+  {
+    "name": "Dornap",
+    "place_id": "place-66583527",
+    "lat": "51.25",
+    "long": "7.066667",
+    "found_at_retry": false
+  },
+  {
+    "name": "Dorp",
+    "place_id": "place-79593570",
+    "lat": "51.393734",
+    "long": "4.474084",
+    "found_at_retry": false
+  },
+  {
+    "name": "Dortmund",
+    "place_id": "place-44882955",
+    "lat": "51.524444",
+    "long": "7.473889",
+    "found_at_retry": true
+  },
+  {
+    "name": "Driedorf",
+    "place_id": "place-42185388",
+    "lat": "50.633333",
+    "long": "8.183333",
+    "found_at_retry": false
+  },
+  {
+    "name": "Duisburg",
+    "place_id": "place-72128866",
+    "lat": "51.435147",
+    "long": "6.762692",
+    "found_at_retry": false
+  },
+  {
+    "name": "Duisburg",
+    "place_id": "place-29978488",
+    "lat": "51.435147",
+    "long": "6.762692",
+    "found_at_retry": false
+  },
+  {
+    "name": "Duisburg",
+    "place_id": "place-82148305",
+    "lat": "51.435147",
+    "long": "6.762692",
+    "found_at_retry": false
+  },
+  {
+    "name": "D\u00fclken",
+    "place_id": "place-82833056",
+    "lat": "51.25",
+    "long": "6.35",
+    "found_at_retry": true
+  },
+  {
+    "name": "D\u00fcsseldorf",
+    "place_id": "place-43212696",
+    "lat": "51.25",
+    "long": "7",
+    "found_at_retry": false
+  },
+  {
+    "name": "Edingen",
+    "place_id": "place-77530652",
+    "lat": "50.633333",
+    "long": "8.316667",
+    "found_at_retry": false
+  },
+  {
+    "name": "Eisenach",
+    "place_id": "place-62833787",
+    "lat": "49.85",
+    "long": "6.516667",
+    "found_at_retry": false
+  },
+  {
+    "name": "Eisenfeld",
+    "place_id": "place-3729963",
+    "lat": "50.5",
+    "long": "8.383333",
+    "found_at_retry": false
+  },
+  {
+    "name": "Elberfeld",
+    "place_id": "place-6454246",
+    "lat": "38.15",
+    "long": "-87.4333",
+    "found_at_retry": false
+  },
+  {
+    "name": "Eller",
+    "place_id": "place-69704108",
+    "lat": "51.2",
+    "long": "6.85",
+    "found_at_retry": false
+  },
+  {
+    "name": "Elsterfeld",
+    "place_id": "place-62144524",
+    "lat": "52.766667",
+    "long": "8.083333",
+    "found_at_retry": true
+  },
+  {
+    "name": "Emdenau",
+    "place_id": "place-42087003",
+    "lat": "51.133333",
+    "long": "9.016667",
+    "found_at_retry": false
+  },
+  {
+    "name": "Emmerich",
+    "place_id": "place-35448478",
+    "lat": "51.833333",
+    "long": "6.25",
+    "found_at_retry": false
+  },
+  {
+    "name": "Endingen",
+    "place_id": "place-69673709",
+    "lat": "54.25",
+    "long": "12.9",
+    "found_at_retry": false
+  },
+  {
+    "name": "Enger",
+    "place_id": "place-47871970",
+    "lat": "44.95",
+    "long": "-122.8667",
+    "found_at_retry": false
+  },
+  {
+    "name": "Eppenhausen",
+    "place_id": "place-17274700",
+    "lat": "51.35",
+    "long": "7.5167",
+    "found_at_retry": false
+  },
+  {
+    "name": "Erfurt",
+    "place_id": "place-83847582",
+    "lat": "50.9667",
+    "long": "11.0333",
+    "found_at_retry": true
+  },
+  {
+    "name": "Erkner",
+    "place_id": "place-74077921",
+    "lat": "52.416667",
+    "long": "13.75",
+    "found_at_retry": false
+  },
+  {
+    "name": "Ernsdorf",
+    "place_id": "place-15772457",
+    "lat": "47.85",
+    "long": "12.35",
+    "found_at_retry": false
+  },
+  {
+    "name": "Ernstweiler",
+    "place_id": "place-36387877",
+    "lat": "49.25",
+    "long": "7.35",
+    "found_at_retry": false
+  },
+  {
+    "name": "Erstein",
+    "place_id": "place-11238300",
+    "lat": "48.421981",
+    "long": "7.661476",
+    "found_at_retry": true
+  },
+  {
+    "name": "Essen",
+    "place_id": "place-67262670",
+    "lat": "41.7833",
+    "long": "-96.4833",
+    "found_at_retry": true
+  },
+  {
+    "name": "Finstingen",
+    "place_id": "place-41473645",
+    "lat": "48.848273",
+    "long": "7.022092",
+    "found_at_retry": false
+  },
+  {
+    "name": "Flechtingen",
+    "place_id": "place-96462967",
+    "lat": "52.347222",
+    "long": "11.260556",
+    "found_at_retry": false
+  },
+  {
+    "name": "Flonheim",
+    "place_id": "place-45736624",
+    "lat": "49.785",
+    "long": "8.04",
+    "found_at_retry": false
+  },
+  {
+    "name": "Forbach",
+    "place_id": "place-3048952",
+    "lat": "49.185575",
+    "long": "6.891406",
+    "found_at_retry": false
+  },
+  {
+    "name": "Frankfurt am Main",
+    "place_id": "place-77324016",
+    "lat": "50.130833",
+    "long": "8.663611",
+    "found_at_retry": true
+  },
+  {
+    "name": "Fraulautern",
+    "place_id": "place-31493617",
+    "lat": "49.333333",
+    "long": "6.766667",
+    "found_at_retry": false
+  },
+  {
+    "name": "Freiendiez",
+    "place_id": "place-45596413",
+    "lat": "50.366667",
+    "long": "8.033333",
+    "found_at_retry": false
+  },
+  {
+    "name": "Friedensdorf",
+    "place_id": "place-7294197",
+    "lat": "50.85",
+    "long": "8.566667",
+    "found_at_retry": false
+  },
+  {
+    "name": "Fulda",
+    "place_id": "place-19368028",
+    "lat": "50.582778",
+    "long": "9.761111",
+    "found_at_retry": false
+  },
+  {
+    "name": "Gaarden",
+    "place_id": "place-94413601",
+    "lat": "54.316667",
+    "long": "10.15",
+    "found_at_retry": false
+  },
+  {
+    "name": "Gauensiek",
+    "place_id": "place-52579607",
+    "lat": "53.7",
+    "long": "9.416667",
+    "found_at_retry": false
+  },
+  {
+    "name": "Geilenkirchen",
+    "place_id": "place-9879896",
+    "lat": "50.966667",
+    "long": "6.116667",
+    "found_at_retry": true
+  },
+  {
+    "name": "Geisweid",
+    "place_id": "place-41995369",
+    "lat": "50.916667",
+    "long": "8.033333",
+    "found_at_retry": false
+  },
+  {
+    "name": "Gelsenkirchen",
+    "place_id": "place-25946996",
+    "lat": "51.516667",
+    "long": "7.05",
+    "found_at_retry": true
+  },
+  {
+    "name": "Geseke",
+    "place_id": "place-7922108",
+    "lat": "51.65",
+    "long": "8.516667",
+    "found_at_retry": false
+  },
+  {
+    "name": "Gevelsberg",
+    "place_id": "place-51045322",
+    "lat": "51.316667",
+    "long": "7.333333",
+    "found_at_retry": false
+  },
+  {
+    "name": "Gevelsberg",
+    "place_id": "place-75807802",
+    "lat": "51.316667",
+    "long": "7.333333",
+    "found_at_retry": false
+  },
+  {
+    "name": "Giessen",
+    "place_id": "place-15637548",
+    "lat": "50.5833",
+    "long": "8.65",
+    "found_at_retry": true
+  },
+  {
+    "name": "Gildehaus",
+    "place_id": "place-64292064",
+    "lat": "52.183333",
+    "long": "8.083333",
+    "found_at_retry": false
+  },
+  {
+    "name": "Gnesen",
+    "place_id": "place-81875225",
+    "lat": "52.5333",
+    "long": "17.5333",
+    "found_at_retry": false
+  },
+  {
+    "name": "G\u00f6rlitz",
+    "place_id": "place-64135942",
+    "lat": "51.216667",
+    "long": "13.066667",
+    "found_at_retry": true
+  },
+  {
+    "name": "G\u00f6ttingen",
+    "place_id": "place-38487068",
+    "lat": "51.510833",
+    "long": "9.913611",
+    "found_at_retry": true
+  },
+  {
+    "name": "Grafenberg",
+    "place_id": "place-87031021",
+    "lat": "51.233333",
+    "long": "6.833333",
+    "found_at_retry": false
+  },
+  {
+    "name": "Gr\u00e4frath",
+    "place_id": "place-80040361",
+    "lat": "51.216667",
+    "long": "7.066667",
+    "found_at_retry": false
+  },
+  {
+    "name": "Griethausen",
+    "place_id": "place-35520735",
+    "lat": "51.816667",
+    "long": "6.166667",
+    "found_at_retry": false
+  },
+  {
+    "name": "Grossalmerode",
+    "place_id": "place-4400821",
+    "lat": "51.25",
+    "long": "9.7667",
+    "found_at_retry": false
+  },
+  {
+    "name": "Gro\u00df",
+    "place_id": "place-87765268",
+    "lat": "52.4",
+    "long": "9.8",
+    "found_at_retry": false
+  },
+  {
+    "name": "Grube",
+    "place_id": "place-11826636",
+    "lat": "51.166667",
+    "long": "14.666667",
+    "found_at_retry": false
+  },
+  {
+    "name": "Gummersbach",
+    "place_id": "place-4588927",
+    "lat": "51.033333",
+    "long": "7.55",
+    "found_at_retry": false
+  },
+  {
+    "name": "G\u00fctersloh",
+    "place_id": "place-97622015",
+    "lat": "51.929444",
+    "long": "8.324444",
+    "found_at_retry": false
+  },
+  {
+    "name": "Haan",
+    "place_id": "place-81579231",
+    "lat": "51.2",
+    "long": "7",
+    "found_at_retry": false
+  },
+  {
+    "name": "Hagelsiepen",
+    "place_id": "place-83456077",
+    "lat": "51.2",
+    "long": "7.366667",
+    "found_at_retry": false
+  },
+  {
+    "name": "Hagen",
+    "place_id": "place-98867129",
+    "lat": "52.2",
+    "long": "7.983333",
+    "found_at_retry": false
+  },
+  {
+    "name": "Halle an der Saale",
+    "place_id": "place-99714270",
+    "lat": "51.5",
+    "long": "12",
+    "found_at_retry": true
+  },
+  {
+    "name": "Halver",
+    "place_id": "place-50415416",
+    "lat": "51.2",
+    "long": "7.483333",
+    "found_at_retry": false
+  },
+  {
+    "name": "Halver",
+    "place_id": "place-40774711",
+    "lat": "51.2",
+    "long": "7.483333",
+    "found_at_retry": false
+  },
+  {
+    "name": "Hambach",
+    "place_id": "place-82625557",
+    "lat": "50.116667",
+    "long": "10.816667",
+    "found_at_retry": false
+  },
+  {
+    "name": "Hamborn",
+    "place_id": "place-80986301",
+    "lat": "51.483333",
+    "long": "6.766667",
+    "found_at_retry": true
+  },
+  {
+    "name": "Hanau",
+    "place_id": "place-69492073",
+    "lat": "50.25",
+    "long": "9.304722",
+    "found_at_retry": true
+  },
+  {
+    "name": "Hannover",
+    "place_id": "place-50290413",
+    "lat": "47.1",
+    "long": "-101.4167",
+    "found_at_retry": true
+  },
+  {
+    "name": "Hardtbach",
+    "place_id": "place-25665296",
+    "lat": "51.216667",
+    "long": "7.3",
+    "found_at_retry": false
+  },
+  {
+    "name": "Hasbergen",
+    "place_id": "place-88070751",
+    "lat": "53.0833",
+    "long": "8.6667",
+    "found_at_retry": false
+  },
+  {
+    "name": "Haspe",
+    "place_id": "place-71737155",
+    "lat": "51.35",
+    "long": "7.433333",
+    "found_at_retry": false
+  },
+  {
+    "name": "Heideck",
+    "place_id": "place-37456053",
+    "lat": "48.666667",
+    "long": "13.5",
+    "found_at_retry": false
+  },
+  {
+    "name": "Herbecke",
+    "place_id": "place-86857704",
+    "lat": "51.233333",
+    "long": "7.516667",
+    "found_at_retry": false
+  },
+  {
+    "name": "Heven",
+    "place_id": "place-42826721",
+    "lat": "51.433333",
+    "long": "7.283333",
+    "found_at_retry": false
+  },
+  {
+    "name": "Hiddinghausen",
+    "place_id": "place-68957934",
+    "lat": "52.85",
+    "long": "9.283333",
+    "found_at_retry": false
+  },
+  {
+    "name": "Hilden",
+    "place_id": "place-93504021",
+    "lat": "30.05",
+    "long": "-81.4333",
+    "found_at_retry": false
+  },
+  {
+    "name": "Hoboken",
+    "place_id": "place-60130028",
+    "lat": "51.166667",
+    "long": "4.35",
+    "found_at_retry": false
+  },
+  {
+    "name": "Hombrechtikon",
+    "place_id": "place-46695844",
+    "lat": "47.25151",
+    "long": "8.7709",
+    "found_at_retry": false
+  },
+  {
+    "name": "Homburg",
+    "place_id": "place-54996118",
+    "lat": "49.793611",
+    "long": "9.623611",
+    "found_at_retry": false
+  },
+  {
+    "name": "Honnef",
+    "place_id": "place-78741413",
+    "lat": "50.633333",
+    "long": "7.233333",
+    "found_at_retry": false
+  },
+  {
+    "name": "Horath",
+    "place_id": "place-76694521",
+    "lat": "49.816667",
+    "long": "6.983333",
+    "found_at_retry": false
+  },
+  {
+    "name": "Hubbelrath",
+    "place_id": "place-53270135",
+    "lat": "51.266667",
+    "long": "6.916667",
+    "found_at_retry": true
+  },
+  {
+    "name": "H\u00fcckeswagen",
+    "place_id": "place-47039265",
+    "lat": "51.15",
+    "long": "7.35",
+    "found_at_retry": false
+  },
+  {
+    "name": "H\u00fcls",
+    "place_id": "place-83616964",
+    "lat": "53.75",
+    "long": "10.266667",
+    "found_at_retry": false
+  },
+  {
+    "name": "Hunstig",
+    "place_id": "place-7487286",
+    "lat": "50.966667",
+    "long": "7.516667",
+    "found_at_retry": false
+  },
+  {
+    "name": "Ihrhove",
+    "place_id": "place-20662966",
+    "lat": "53.166667",
+    "long": "7.45",
+    "found_at_retry": false
+  },
+  {
+    "name": "Iserlohn",
+    "place_id": "place-83906496",
+    "lat": "51.3833",
+    "long": "7.7",
+    "found_at_retry": true
+  },
+  {
+    "name": "Iserlohn",
+    "place_id": "place-77832601",
+    "lat": "51.3833",
+    "long": "7.7",
+    "found_at_retry": false
+  },
+  {
+    "name": "Kassel",
+    "place_id": "place-40307581",
+    "lat": "51.318333",
+    "long": "9.488056",
+    "found_at_retry": true
+  },
+  {
+    "name": "Kirchen",
+    "place_id": "place-68317767",
+    "lat": "50.8",
+    "long": "7.883333",
+    "found_at_retry": false
+  },
+  {
+    "name": "Kloster",
+    "place_id": "place-94228039",
+    "lat": "46.724476",
+    "long": "7.295701",
+    "found_at_retry": false
+  },
+  {
+    "name": "K\u00f6ln",
+    "place_id": "place-2474189",
+    "lat": "50.833333",
+    "long": "7.166667",
+    "found_at_retry": true
+  },
+  {
+    "name": "K\u00f6ln-Deutz",
+    "place_id": "place-99225978",
+    "lat": "50.931944",
+    "long": "7.005278",
+    "found_at_retry": true
+  },
+  {
+    "name": "K\u00f6ln-Ehrenfeld",
+    "place_id": "place-3416943",
+    "lat": "50.951944",
+    "long": "6.920278",
+    "found_at_retry": true
+  },
+  {
+    "name": "K\u00f6nigswinter",
+    "place_id": "place-44236250",
+    "lat": "50.683333",
+    "long": "7.183333",
+    "found_at_retry": false
+  },
+  {
+    "name": "K\u00f6slin",
+    "place_id": "place-77905609",
+    "lat": "54.1667",
+    "long": "16.1667",
+    "found_at_retry": true
+  },
+  {
+    "name": "Krefeld",
+    "place_id": "place-22914101",
+    "lat": "51.325556",
+    "long": "6.570833",
+    "found_at_retry": true
+  },
+  {
+    "name": "K\u00fcllenhahn",
+    "place_id": "place-66686284",
+    "lat": "51.216667",
+    "long": "7.116667",
+    "found_at_retry": false
+  },
+  {
+    "name": "Lage",
+    "place_id": "place-82595003",
+    "lat": "52.7",
+    "long": "8.05",
+    "found_at_retry": false
+  },
+  {
+    "name": "Landsberg",
+    "place_id": "place-39905719",
+    "lat": "51.516667",
+    "long": "12.166667",
+    "found_at_retry": false
+  },
+  {
+    "name": "Langenberg",
+    "place_id": "place-14489350",
+    "lat": "50.916667",
+    "long": "12.066667",
+    "found_at_retry": false
+  },
+  {
+    "name": "Langenfeld",
+    "place_id": "place-26411394",
+    "lat": "50.783333",
+    "long": "10.216667",
+    "found_at_retry": false
+  },
+  {
+    "name": "Langenhagen",
+    "place_id": "place-84889899",
+    "lat": "53.566667",
+    "long": "12.033333",
+    "found_at_retry": false
+  },
+  {
+    "name": "Langerfeld",
+    "place_id": "place-65976384",
+    "lat": "51.266667",
+    "long": "7.25",
+    "found_at_retry": false
+  },
+  {
+    "name": "Leichlingen",
+    "place_id": "place-41964717",
+    "lat": "51.116667",
+    "long": "7.016667",
+    "found_at_retry": false
+  },
+  {
+    "name": "Leipzig",
+    "place_id": "place-42250904",
+    "lat": "51.25",
+    "long": "12.75",
+    "found_at_retry": true
+  },
+  {
+    "name": "Lennep",
+    "place_id": "place-72477060",
+    "lat": "51.2",
+    "long": "7.25",
+    "found_at_retry": true
+  },
+  {
+    "name": "Limburg",
+    "place_id": "place-19951768",
+    "lat": "51.033333",
+    "long": "8.4",
+    "found_at_retry": false
+  },
+  {
+    "name": "Lodz",
+    "place_id": "place-13419298",
+    "lat": "51.5",
+    "long": "19.5",
+    "found_at_retry": false
+  },
+  {
+    "name": "Lollar",
+    "place_id": "place-59697607",
+    "lat": "50.65",
+    "long": "8.7",
+    "found_at_retry": false
+  },
+  {
+    "name": "London",
+    "place_id": "place-81702968",
+    "lat": "40.9",
+    "long": "-82.6167",
+    "found_at_retry": true
+  },
+  {
+    "name": "L\u00fcdenscheid",
+    "place_id": "place-85183813",
+    "lat": "51.2167",
+    "long": "7.6333",
+    "found_at_retry": false
+  },
+  {
+    "name": "L\u00fcttringhausen",
+    "place_id": "place-71177020",
+    "lat": "51.216667",
+    "long": "7.233333",
+    "found_at_retry": false
+  },
+  {
+    "name": "L\u00fctzelburg",
+    "place_id": "place-76238901",
+    "lat": "48.466667",
+    "long": "10.8",
+    "found_at_retry": false
+  },
+  {
+    "name": "Magdeburg",
+    "place_id": "place-50015999",
+    "lat": "52.141667",
+    "long": "11.644444",
+    "found_at_retry": false
+  },
+  {
+    "name": "Mainbernheim",
+    "place_id": "place-19254544",
+    "lat": "49.7",
+    "long": "10.25",
+    "found_at_retry": false
+  },
+  {
+    "name": "Mainz",
+    "place_id": "place-74105281",
+    "lat": "50.001111",
+    "long": "8.257778",
+    "found_at_retry": true
+  },
+  {
+    "name": "Marienburg",
+    "place_id": "place-4035601",
+    "lat": "52.116667",
+    "long": "9.983333",
+    "found_at_retry": false
+  },
+  {
+    "name": "Markershausen",
+    "place_id": "place-69384639",
+    "lat": "51.033333",
+    "long": "10.116667",
+    "found_at_retry": false
+  },
+  {
+    "name": "Mehlen",
+    "place_id": "place-88045268",
+    "lat": "51.166667",
+    "long": "9.1",
+    "found_at_retry": false
+  },
+  {
+    "name": "Menden",
+    "place_id": "place-93026193",
+    "lat": "51.4",
+    "long": "6.9",
+    "found_at_retry": false
+  },
+  {
+    "name": "Metternich",
+    "place_id": "place-80864578",
+    "lat": "50.233333",
+    "long": "7.383333",
+    "found_at_retry": false
+  },
+  {
+    "name": "Mettmann",
+    "place_id": "place-88710681",
+    "lat": "51.25",
+    "long": "6.966667",
+    "found_at_retry": false
+  },
+  {
+    "name": "Metz",
+    "place_id": "place-2394686",
+    "lat": "50.0667",
+    "long": "3.064278",
+    "found_at_retry": true
+  },
+  {
+    "name": "Mexico",
+    "place_id": "place-1399253",
+    "lat": "39.1667",
+    "long": "-91.8667",
+    "found_at_retry": true
+  },
+  {
+    "name": "Millrath",
+    "place_id": "place-22207797",
+    "lat": "51.2",
+    "long": "6.966667",
+    "found_at_retry": false
+  },
+  {
+    "name": "Milspe",
+    "place_id": "place-98530774",
+    "lat": "51.3",
+    "long": "7.35",
+    "found_at_retry": false
+  },
+  {
+    "name": "Minden",
+    "place_id": "place-4790683",
+    "lat": "40.4833",
+    "long": "-98.9333",
+    "found_at_retry": true
+  },
+  {
+    "name": "Moers",
+    "place_id": "place-74518628",
+    "lat": "51.45",
+    "long": "6.6",
+    "found_at_retry": true
+  },
+  {
+    "name": "Montigny",
+    "place_id": "place-33509638",
+    "lat": "48.766356",
+    "long": "2.03405",
+    "found_at_retry": false
+  },
+  {
+    "name": "Monzingen",
+    "place_id": "place-79641407",
+    "lat": "49.8",
+    "long": "7.583333",
+    "found_at_retry": false
+  },
+  {
+    "name": "Mudersbach",
+    "place_id": "place-72985371",
+    "lat": "50.816667",
+    "long": "7.95",
+    "found_at_retry": false
+  },
+  {
+    "name": "M\u00fchlhausen",
+    "place_id": "place-12912627",
+    "lat": "48.933333",
+    "long": "8.9",
+    "found_at_retry": false
+  },
+  {
+    "name": "M\u00fchlheim",
+    "place_id": "place-81456514",
+    "lat": "49.585",
+    "long": "8.1875",
+    "found_at_retry": false
+  },
+  {
+    "name": "M\u00fclhausen",
+    "place_id": "place-97249038",
+    "lat": "51.333333",
+    "long": "6.366667",
+    "found_at_retry": false
+  },
+  {
+    "name": "M\u00fcnchen",
+    "place_id": "place-56969293",
+    "lat": "48.051389",
+    "long": "11.642222",
+    "found_at_retry": true
+  },
+  {
+    "name": "M\u00fcnster",
+    "place_id": "place-5256131",
+    "lat": "51.833333",
+    "long": "7.416667",
+    "found_at_retry": false
+  },
+  {
+    "name": "Nachrodt",
+    "place_id": "place-60173211",
+    "lat": "51.35",
+    "long": "7.633333",
+    "found_at_retry": false
+  },
+  {
+    "name": "Nassau",
+    "place_id": "place-23255199",
+    "lat": "50.770278",
+    "long": "13.485833",
+    "found_at_retry": false
+  },
+  {
+    "name": "Naumburg an der Saale",
+    "place_id": "place-6944887",
+    "lat": "51.15",
+    "long": "11.816667",
+    "found_at_retry": true
+  },
+  {
+    "name": "Neesen",
+    "place_id": "place-22716038",
+    "lat": "52.333333",
+    "long": "7.133333",
+    "found_at_retry": false
+  },
+  {
+    "name": "Neisse",
+    "place_id": "place-29591635",
+    "lat": "50.473",
+    "long": "17.334",
+    "found_at_retry": true
+  },
+  {
+    "name": "Neuenkirchen",
+    "place_id": "place-31363860",
+    "lat": "53.6",
+    "long": "13.366667",
+    "found_at_retry": false
+  },
+  {
+    "name": "Neuhof",
+    "place_id": "place-57637979",
+    "lat": "52.9",
+    "long": "11.783333",
+    "found_at_retry": false
+  },
+  {
+    "name": "Neukirchen",
+    "place_id": "place-23290338",
+    "lat": "48.4",
+    "long": "13.8",
+    "found_at_retry": false
+  },
+  {
+    "name": "Neundorf",
+    "place_id": "place-2489022",
+    "lat": "50.233333",
+    "long": "10.833333",
+    "found_at_retry": false
+  },
+  {
+    "name": "Neustettin",
+    "place_id": "place-79915915",
+    "lat": "53.7",
+    "long": "16.6833",
+    "found_at_retry": true
+  },
+  {
+    "name": "Neuwied",
+    "place_id": "place-28532591",
+    "lat": "50.539444",
+    "long": "7.478056",
+    "found_at_retry": true
+  },
+  {
+    "name": "Neuzelle",
+    "place_id": "place-83698912",
+    "lat": "52.099722",
+    "long": "14.647222",
+    "found_at_retry": false
+  },
+  {
+    "name": "Neviges",
+    "place_id": "place-68413626",
+    "lat": "51.316667",
+    "long": "7.083333",
+    "found_at_retry": false
+  },
+  {
+    "name": "Niederbreisig",
+    "place_id": "place-59872070",
+    "lat": "50.516667",
+    "long": "7.3",
+    "found_at_retry": false
+  },
+  {
+    "name": "Niedersgegen",
+    "place_id": "place-53028930",
+    "lat": "49.9",
+    "long": "6.283333",
+    "found_at_retry": false
+  },
+  {
+    "name": "Nordborchen",
+    "place_id": "place-30688784",
+    "lat": "51.666667",
+    "long": "8.716667",
+    "found_at_retry": false
+  },
+  {
+    "name": "Nordl\u00fcnern",
+    "place_id": "place-20878628",
+    "lat": "51.55",
+    "long": "7.75",
+    "found_at_retry": false
+  },
+  {
+    "name": "Oberelspe",
+    "place_id": "place-93522218",
+    "lat": "51.15",
+    "long": "8.083333",
+    "found_at_retry": false
+  },
+  {
+    "name": "Oberhausen",
+    "place_id": "place-92419616",
+    "lat": "49.716667",
+    "long": "7.866667",
+    "found_at_retry": true
+  },
+  {
+    "name": "Oberkr\u00fcchten",
+    "place_id": "place-82060226",
+    "lat": "51.2",
+    "long": "6.2",
+    "found_at_retry": false
+  },
+  {
+    "name": "Oberlahnstein",
+    "place_id": "place-24602242",
+    "lat": "50.3",
+    "long": "7.616667",
+    "found_at_retry": false
+  },
+  {
+    "name": "Ochtrup",
+    "place_id": "place-76734639",
+    "lat": "52.216667",
+    "long": "7.183333",
+    "found_at_retry": false
+  },
+  {
+    "name": "Oesterau",
+    "place_id": "place-28992320",
+    "lat": "51.183333",
+    "long": "7.85",
+    "found_at_retry": false
+  },
+  {
+    "name": "Offenbach am Main",
+    "place_id": "place-8757288",
+    "lat": "50.1",
+    "long": "8.766667",
+    "found_at_retry": true
+  },
+  {
+    "name": "Ohligs",
+    "place_id": "place-59015634",
+    "lat": "51.15",
+    "long": "7",
+    "found_at_retry": false
+  },
+  {
+    "name": "Opladen",
+    "place_id": "place-44668797",
+    "lat": "51.1667",
+    "long": "7",
+    "found_at_retry": false
+  },
+  {
+    "name": "Osnabr\u00fcck",
+    "place_id": "place-39159741",
+    "lat": "52.4125",
+    "long": "8.047222",
+    "found_at_retry": true
+  },
+  {
+    "name": "Osterode",
+    "place_id": "place-25856307",
+    "lat": "52.033333",
+    "long": "10.666667",
+    "found_at_retry": false
+  },
+  {
+    "name": "Pforzheim",
+    "place_id": "place-72750384",
+    "lat": "48.89",
+    "long": "8.710833",
+    "found_at_retry": false
+  },
+  {
+    "name": "Plauen",
+    "place_id": "place-19546481",
+    "lat": "51.016667",
+    "long": "13.716667",
+    "found_at_retry": false
+  },
+  {
+    "name": "Plettenberg",
+    "place_id": "place-94743705",
+    "lat": "51.216667",
+    "long": "7.883333",
+    "found_at_retry": false
+  },
+  {
+    "name": "Preu\u00dfisch",
+    "place_id": "place-74890471",
+    "lat": "52.3",
+    "long": "8.5",
+    "found_at_retry": false
+  },
+  {
+    "name": "Prenzlau",
+    "place_id": "place-81421489",
+    "lat": "53.316667",
+    "long": "13.866667",
+    "found_at_retry": true
+  },
+  {
+    "name": "Probstzella",
+    "place_id": "place-30479819",
+    "lat": "50.533333",
+    "long": "11.383333",
+    "found_at_retry": false
+  },
+  {
+    "name": "Quedlinburg",
+    "place_id": "place-55517334",
+    "lat": "51.714167",
+    "long": "11.139444",
+    "found_at_retry": true
+  },
+  {
+    "name": "Radevormwald",
+    "place_id": "place-98473960",
+    "lat": "51.2",
+    "long": "7.35",
+    "found_at_retry": false
+  },
+  {
+    "name": "Raeren",
+    "place_id": "place-63354278",
+    "lat": "50.683333",
+    "long": "6.116667",
+    "found_at_retry": false
+  },
+  {
+    "name": "Rathenow",
+    "place_id": "place-48055036",
+    "lat": "52.6",
+    "long": "12.333333",
+    "found_at_retry": false
+  },
+  {
+    "name": "Recklinghausen",
+    "place_id": "place-11369969",
+    "lat": "51.666389",
+    "long": "7.155278",
+    "found_at_retry": true
+  },
+  {
+    "name": "Reichenberg",
+    "place_id": "place-75720067",
+    "lat": "51.133333",
+    "long": "13.683333",
+    "found_at_retry": false
+  },
+  {
+    "name": "Remscheid",
+    "place_id": "place-32095995",
+    "lat": "51.190556",
+    "long": "7.224722",
+    "found_at_retry": false
+  },
+  {
+    "name": "Rinteln",
+    "place_id": "place-93737958",
+    "lat": "52.183333",
+    "long": "9.083333",
+    "found_at_retry": false
+  },
+  {
+    "name": "Roda",
+    "place_id": "place-14159209",
+    "lat": "31.912914",
+    "long": "70.549785",
+    "found_at_retry": false
+  },
+  {
+    "name": "Rodenbach",
+    "place_id": "place-31542521",
+    "lat": "50.3",
+    "long": "8.95",
+    "found_at_retry": false
+  },
+  {
+    "name": "Roggendorf",
+    "place_id": "place-90672002",
+    "lat": "53.7",
+    "long": "11.016667",
+    "found_at_retry": false
+  },
+  {
+    "name": "Ronsdorf",
+    "place_id": "place-85113564",
+    "lat": "51.233333",
+    "long": "7.2",
+    "found_at_retry": false
+  },
+  {
+    "name": "R\u00fcdersdorf",
+    "place_id": "place-60061447",
+    "lat": "52.483333",
+    "long": "13.783333",
+    "found_at_retry": false
+  },
+  {
+    "name": "R\u00fcdesheim am Rhein",
+    "place_id": "place-2310071",
+    "lat": "49.983333",
+    "long": "7.916667",
+    "found_at_retry": true
+  },
+  {
+    "name": "Rumeln",
+    "place_id": "place-76016870",
+    "lat": "51.4",
+    "long": "6.666667",
+    "found_at_retry": false
+  },
+  {
+    "name": "Saarlouis",
+    "place_id": "place-7887778",
+    "lat": "49.338611",
+    "long": "6.789444",
+    "found_at_retry": false
+  },
+  {
+    "name": "Sachsenhausen",
+    "place_id": "place-39241364",
+    "lat": "50.1",
+    "long": "8.7",
+    "found_at_retry": false
+  },
+  {
+    "name": "Salm\u00fcnster",
+    "place_id": "place-23185329",
+    "lat": "50.25",
+    "long": "9.416667",
+    "found_at_retry": false
+  },
+  {
+    "name": "Schalke",
+    "place_id": "place-17646329",
+    "lat": "51.5167",
+    "long": "7.0833",
+    "found_at_retry": false
+  },
+  {
+    "name": "Sch\u00f6ller",
+    "place_id": "place-16746713",
+    "lat": "51.233333",
+    "long": "7.016667",
+    "found_at_retry": false
+  },
+  {
+    "name": "Lehrte",
+    "place_id": "place-9729531",
+    "lat": "52.383333",
+    "long": "9.966667",
+    "found_at_retry": false
+  },
+  {
+    "name": "Schwelm",
+    "place_id": "place-72428885",
+    "lat": "51.283333",
+    "long": "7.283333",
+    "found_at_retry": false
+  },
+  {
+    "name": "Seriem",
+    "place_id": "place-15820927",
+    "lat": "53.7",
+    "long": "7.65",
+    "found_at_retry": false
+  },
+  {
+    "name": "Siegburg",
+    "place_id": "place-17216804",
+    "lat": "50.8",
+    "long": "7.2",
+    "found_at_retry": true
+  },
+  {
+    "name": "Siegen",
+    "place_id": "place-97300600",
+    "lat": "30.3667",
+    "long": "-91.0667",
+    "found_at_retry": false
+  },
+  {
+    "name": "Siegmar",
+    "place_id": "place-72131555",
+    "lat": "50.816667",
+    "long": "12.85",
+    "found_at_retry": false
+  },
+  {
+    "name": "Siershahn",
+    "place_id": "place-4219200",
+    "lat": "50.483333",
+    "long": "7.8",
+    "found_at_retry": false
+  },
+  {
+    "name": "Sinzig",
+    "place_id": "place-76518037",
+    "lat": "50.55",
+    "long": "7.25",
+    "found_at_retry": false
+  },
+  {
+    "name": "Soden",
+    "place_id": "place-68122800",
+    "lat": "47.75",
+    "long": "9.416667",
+    "found_at_retry": false
+  },
+  {
+    "name": "Soest",
+    "place_id": "place-29221436",
+    "lat": "51.566944",
+    "long": "8.204444",
+    "found_at_retry": false
+  },
+  {
+    "name": "Solingen",
+    "place_id": "place-52177051",
+    "lat": "51.170278",
+    "long": "7.063611",
+    "found_at_retry": true
+  },
+  {
+    "name": "Sonneberg",
+    "place_id": "place-5001259",
+    "lat": "50.429444",
+    "long": "11.147222",
+    "found_at_retry": false
+  },
+  {
+    "name": "Speldorf",
+    "place_id": "place-14397726",
+    "lat": "51.416667",
+    "long": "6.866667",
+    "found_at_retry": false
+  },
+  {
+    "name": "Sprockh\u00f6vel",
+    "place_id": "place-60958395",
+    "lat": "51.35",
+    "long": "7.25",
+    "found_at_retry": false
+  },
+  {
+    "name": "Sankt",
+    "place_id": "place-47234479",
+    "lat": "47.8667",
+    "long": "15.5833",
+    "found_at_retry": false
+  },
+  {
+    "name": "St.",
+    "place_id": "place-10520217",
+    "lat": "50.183",
+    "long": "2.166",
+    "found_at_retry": false
+  },
+  {
+    "name": "St.",
+    "place_id": "place-84844952",
+    "lat": "50.183",
+    "long": "2.166",
+    "found_at_retry": false
+  },
+  {
+    "name": "Steele",
+    "place_id": "place-50601744",
+    "lat": "40.0333",
+    "long": "-97.0167",
+    "found_at_retry": false
+  },
+  {
+    "name": "Steina",
+    "place_id": "place-42204442",
+    "lat": "51.1",
+    "long": "13.016667",
+    "found_at_retry": false
+  },
+  {
+    "name": "Stendal",
+    "place_id": "place-62155314",
+    "lat": "38.2667",
+    "long": "-87.1333",
+    "found_at_retry": false
+  },
+  {
+    "name": "Stra\u00dfburg",
+    "place_id": "place-14903752",
+    "lat": "49.55",
+    "long": "8.85",
+    "found_at_retry": false
+  },
+  {
+    "name": "Strassburg",
+    "place_id": "place-17194140",
+    "lat": "48.566667",
+    "long": "12.25",
+    "found_at_retry": false
+  },
+  {
+    "name": "Str\u00fcmpfelbrunn",
+    "place_id": "place-61463105",
+    "lat": "49.463056",
+    "long": "9.075556",
+    "found_at_retry": false
+  },
+  {
+    "name": "Styrum",
+    "place_id": "place-21186789",
+    "lat": "51.45",
+    "long": "6.85",
+    "found_at_retry": false
+  },
+  {
+    "name": "S\u00fcrth",
+    "place_id": "place-36662914",
+    "lat": "50.866667",
+    "long": "7",
+    "found_at_retry": false
+  },
+  {
+    "name": "Trier",
+    "place_id": "place-81076088",
+    "lat": "50",
+    "long": "6.583333",
+    "found_at_retry": true
+  },
+  {
+    "name": "Uerdingen",
+    "place_id": "place-41705185",
+    "lat": "51.35",
+    "long": "6.65",
+    "found_at_retry": false
+  },
+  {
+    "name": "Unna",
+    "place_id": "place-61744329",
+    "lat": "51.568611",
+    "long": "7.7175",
+    "found_at_retry": false
+  },
+  {
+    "name": "Untermhaus",
+    "place_id": "place-20763572",
+    "lat": "50.883333",
+    "long": "12.066667",
+    "found_at_retry": false
+  },
+  {
+    "name": "Urft",
+    "place_id": "place-89096552",
+    "lat": "50.516667",
+    "long": "6.583333",
+    "found_at_retry": false
+  },
+  {
+    "name": "Valdivia",
+    "place_id": "place-17599964",
+    "lat": "7.1667",
+    "long": "-75.4167",
+    "found_at_retry": false
+  },
+  {
+    "name": "Velbert",
+    "place_id": "place-74351779",
+    "lat": "51.333333",
+    "long": "7.016667",
+    "found_at_retry": false
+  },
+  {
+    "name": "Versmold",
+    "place_id": "place-2930255",
+    "lat": "52.05",
+    "long": "8.15",
+    "found_at_retry": false
+  },
+  {
+    "name": "Viersen",
+    "place_id": "place-54004534",
+    "lat": "51.290833",
+    "long": "6.345556",
+    "found_at_retry": false
+  },
+  {
+    "name": "Voerde",
+    "place_id": "place-81906645",
+    "lat": "51.6",
+    "long": "6.683333",
+    "found_at_retry": false
+  },
+  {
+    "name": "Vohwinkel",
+    "place_id": "place-1512591",
+    "lat": "51.2333",
+    "long": "7.15",
+    "found_at_retry": false
+  },
+  {
+    "name": "V\u00f6lkenroth",
+    "place_id": "place-36455508",
+    "lat": "50.033333",
+    "long": "7.4",
+    "found_at_retry": false
+  },
+  {
+    "name": "Vreden",
+    "place_id": "place-59030659",
+    "lat": "52.033333",
+    "long": "6.833333",
+    "found_at_retry": false
+  },
+  {
+    "name": "Wabern",
+    "place_id": "place-52291611",
+    "lat": "46.927208",
+    "long": "7.452143",
+    "found_at_retry": false
+  },
+  {
+    "name": "Wald",
+    "place_id": "place-2688482",
+    "lat": "47.133",
+    "long": "10.033",
+    "found_at_retry": true
+  },
+  {
+    "name": "Wald,",
+    "place_id": "place-95648746",
+    "lat": "-48.8",
+    "long": "-74.616667",
+    "found_at_retry": false
+  },
+  {
+    "name": "Waltrop",
+    "place_id": "place-60569328",
+    "lat": "51.633333",
+    "long": "7.4",
+    "found_at_retry": false
+  },
+  {
+    "name": "Warendorf",
+    "place_id": "place-74813031",
+    "lat": "51.899167",
+    "long": "7.946944",
+    "found_at_retry": false
+  },
+  {
+    "name": "Wegerhof",
+    "place_id": "place-11854052",
+    "lat": "51.166667",
+    "long": "7.516667",
+    "found_at_retry": false
+  },
+  {
+    "name": "Weidenau",
+    "place_id": "place-81871540",
+    "lat": "50.45",
+    "long": "9.45",
+    "found_at_retry": false
+  },
+  {
+    "name": "Weilburg",
+    "place_id": "place-23298298",
+    "lat": "50.483333",
+    "long": "8.25",
+    "found_at_retry": false
+  },
+  {
+    "name": "Wei\u00dfensee",
+    "place_id": "place-28453145",
+    "lat": "51.183333",
+    "long": "11.066667",
+    "found_at_retry": false
+  },
+  {
+    "name": "Wengerohr",
+    "place_id": "place-87534679",
+    "lat": "49.966667",
+    "long": "6.933333",
+    "found_at_retry": false
+  },
+  {
+    "name": "Werden",
+    "place_id": "place-10700752",
+    "lat": "51.383333",
+    "long": "7",
+    "found_at_retry": false
+  },
+  {
+    "name": "Werden",
+    "place_id": "place-25872302",
+    "lat": "51.383333",
+    "long": "7",
+    "found_at_retry": false
+  },
+  {
+    "name": "Werdohl",
+    "place_id": "place-9032991",
+    "lat": "51.266667",
+    "long": "7.766667",
+    "found_at_retry": false
+  },
+  {
+    "name": "Werdohl",
+    "place_id": "place-12281376",
+    "lat": "51.266667",
+    "long": "7.766667",
+    "found_at_retry": false
+  },
+  {
+    "name": "Wermelskirchen",
+    "place_id": "place-76239134",
+    "lat": "51.15",
+    "long": "7.216667",
+    "found_at_retry": false
+  },
+  {
+    "name": "Wermelskirchen",
+    "place_id": "place-47400129",
+    "lat": "51.15",
+    "long": "7.216667",
+    "found_at_retry": false
+  },
+  {
+    "name": "Werther",
+    "place_id": "place-80725163",
+    "lat": "51.466667",
+    "long": "10.75",
+    "found_at_retry": false
+  },
+  {
+    "name": "Wesel",
+    "place_id": "place-10913070",
+    "lat": "51.643611",
+    "long": "6.639167",
+    "found_at_retry": false
+  },
+  {
+    "name": "Wesel",
+    "place_id": "place-49467885",
+    "lat": "51.643611",
+    "long": "6.639167",
+    "found_at_retry": false
+  },
+  {
+    "name": "Wetter",
+    "place_id": "place-25083431",
+    "lat": "50.9",
+    "long": "8.716667",
+    "found_at_retry": false
+  },
+  {
+    "name": "Wickede",
+    "place_id": "place-96381725",
+    "lat": "51.5333",
+    "long": "7.6167",
+    "found_at_retry": false
+  },
+  {
+    "name": "Wiesbaden",
+    "place_id": "place-68457294",
+    "lat": "50.069444",
+    "long": "8.243333",
+    "found_at_retry": true
+  },
+  {
+    "name": "Wilhelmshaven",
+    "place_id": "place-37484990",
+    "lat": "53.570278",
+    "long": "8.084167",
+    "found_at_retry": false
+  },
+  {
+    "name": "Wilhelmshaven",
+    "place_id": "place-18272606",
+    "lat": "53.570278",
+    "long": "8.084167",
+    "found_at_retry": false
+  },
+  {
+    "name": "Wilhelmshaven",
+    "place_id": "place-54788500",
+    "lat": "53.570278",
+    "long": "8.084167",
+    "found_at_retry": false
+  },
+  {
+    "name": "Windfoche",
+    "place_id": "place-29010017",
+    "lat": "51.233333",
+    "long": "7.283333",
+    "found_at_retry": false
+  },
+  {
+    "name": "Winkel",
+    "place_id": "place-25315619",
+    "lat": "50",
+    "long": "8",
+    "found_at_retry": false
+  },
+  {
+    "name": "Witten",
+    "place_id": "place-61920132",
+    "lat": "43.4333",
+    "long": "-100.0667",
+    "found_at_retry": false
+  },
+  {
+    "name": "Witten",
+    "place_id": "place-53990804",
+    "lat": "43.4333",
+    "long": "-100.0667",
+    "found_at_retry": false
+  },
+  {
+    "name": "W\u00fclfrath",
+    "place_id": "place-77754975",
+    "lat": "51.283333",
+    "long": "7.05",
+    "found_at_retry": false
+  },
+  {
+    "name": "W\u00fclfrath",
+    "place_id": "place-82510915",
+    "lat": "51.283333",
+    "long": "7.05",
+    "found_at_retry": false
+  },
+  {
+    "name": "W\u00fcrzburg",
+    "place_id": "place-27783637",
+    "lat": "50.133333",
+    "long": "8.233333",
+    "found_at_retry": true
+  },
+  {
+    "name": "Zedlitz",
+    "place_id": "place-41430727",
+    "lat": "50.816667",
+    "long": "12.033333",
+    "found_at_retry": false
+  },
+  {
+    "name": "Zeitz",
+    "place_id": "place-15655952",
+    "lat": "51.05",
+    "long": "12.15",
+    "found_at_retry": false
+  },
+  {
+    "name": "Zellerfeld",
+    "place_id": "place-49774830",
+    "lat": "51.8",
+    "long": "10.333333",
+    "found_at_retry": false
+  }
+]
