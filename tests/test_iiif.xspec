@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description xmlns:map="http://www.w3.org/2005/xpath-functions/map"
+    xmlns:x="http://www.jenitennison.com/xslt/xspec"
+    xmlns:iiif="http://www.dh.uni-wuppertal/ns/schueler/iiif"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tei="http://www.tei-c.org/ns/1.0"
+    stylesheet="./../xslt/iiif.xslt">
+
+    <x:scenario label="Calling iiif:points-to-part">
+        <x:call function="iiif:points-to-part">
+            <x:param name="zone" as="element(tei:zone)">
+                <zone xmlns="http://www.tei-c.org/ns/1.0" points="698,721 831,721 831,1035 698,1035"
+                    rendition="TableCell" xml:id="facs_4_line_1703156845031_1579"/>
+            </x:param>
+        </x:call>
+        <x:expect label="should return the expected coordinates as xs:string"
+            select="'698,721,133,314'" as="xs:string"/>
+    </x:scenario>
+</x:description>
