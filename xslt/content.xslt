@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet xmlns="http://www.w3.org/1999/xhtml"
                 xmlns:html-components="http://www.w3.org/1999/xhtml/components"
-                xmlns:html="http://www.w3.org/1999/xhtml" xmlns:map="http://www.w3.org/2005/xpath-functions/map"
+                xmlns:html="http://www.w3.org/1999/xhtml"
+                xmlns:iiif="http://www.dh.uni-wuppertal/ns/schueler/iiif"
+                xmlns:map="http://www.w3.org/2005/xpath-functions/map"
                 xmlns:pages="http://www.dh.uni-wuppertal/ns/schueler/pages"
                 xmlns:path="http://www.dh.uni-wuppertal/ns/schueler/path"
                 xmlns:persons="http://www.dh.uni-wuppertal/ns/schueler/persons"
@@ -12,6 +14,7 @@
     
     <!-- path.xslt is imported here; so we can use the functions defined there -->
     <xsl:import href="components.xslt"/>
+    <xsl:import href="iiif.xslt"/>
     
     <xsl:import href="persons.xslt"/>
     
@@ -309,6 +312,9 @@
                     generate-id($i) eq $page/@key
                 }
             )"/>
+        <xsl:variable name="iiif-img-points" as="xs:string" select="($surname/ancestor::tei:cell//tei:lb/@facs ! id(substring-after(., '#'), $surname/ancestor::tei:TEI)) => iiif:points-to-part()"/>
+        <xsl:variable name="img-id" as="xs:string*" select="id(substring-after(($surname/ancestor::tei:cell//tei:lb/@facs => head()), '#'), $surname/ancestor::tei:TEI)/ancestor::tei:surface/tei:graphic[1]/@url/data(.)"/>
+        <xsl:variable name="iiif-img-path" as="xs:string" select="iiif:create-url($iiif-host, $image-base, $img-id, $iiif-img-points, 'max', 0)"/>
         <xsl:call-template name="html-components:create-page">
             <xsl:with-param name="page-head"
                 select="html-components:create-head($page-title, $context, $stylesheets)"/>
@@ -320,6 +326,7 @@
                         <xsl:value-of select="$surname/normalize-space()"/>, <xsl:value-of
                             select="$surname/../tei:forename/normalize-space()"/>
                     </h2>
+                    <img src="{$iiif-img-path}"/>
                     <section>
                         <h3>Details</h3>
                         <ul>
