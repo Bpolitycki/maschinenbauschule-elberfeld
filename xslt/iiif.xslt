@@ -5,6 +5,8 @@
                 xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xs="http://www.w3.org/2001/XMLSchema"
                 xmlns:tei="http://www.tei-c.org/ns/1.0" exclude-result-prefixes="#all" version="3.0">
     
+    <xsl:variable name="iiif-host" as="xs:string" select="'https://iiif.dh-projekte.uni-wuppertal.de/iiif/2'"/>
+    <xsl:variable name="image-base" as="xs:string" select="'schuelerverzeichnisse'"/>
     
     <!--
          Create a URL for a IIIF image
@@ -37,8 +39,8 @@
          @return The IIIF region as xs:string
     -->
     <xsl:function name="iiif:points-to-part" as="xs:string">
-        <xsl:param name="zone" as="element(tei:zone)"/>
-        <xsl:variable name="point_pairs" as="xs:string+" select="tokenize($zone/@points, '\s')"/>
+        <xsl:param name="zones" as="element(tei:zone)+"/>
+        <xsl:variable name="point_pairs" as="xs:string+" select="$zones ! tokenize(./@points, '\s')"/>
         <xsl:variable name="xs" as="xs:integer*" select="$point_pairs ! xs:integer(substring-before(., ','))"/>
         <xsl:variable name="ys" as="xs:integer*" select="$point_pairs ! xs:integer(substring-after(., ','))"/>
         
