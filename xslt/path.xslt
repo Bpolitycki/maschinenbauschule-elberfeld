@@ -5,6 +5,8 @@
                 xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xs="http://www.w3.org/2001/XMLSchema"
                 xmlns:tei="http://www.tei-c.org/ns/1.0" exclude-result-prefixes="#all" version="3.0">
     
+    <xsl:variable name="default-index-name" select="'index.html'" as="xs:string"/>
+    
     <!--
          Create a file- or directory-name from a page element.
          
@@ -18,13 +20,13 @@
         <xsl:variable name="path" as="xs:string">
             <xsl:choose>
                 <xsl:when test="$page/@key = '/'">
-                    <xsl:value-of select="path:join(($output-dir, 'index.html'))"/>
+                    <xsl:value-of select="path:join(($output-dir, $default-index-name))"/>
                 </xsl:when>
                 <xsl:when test="$page/pages:page">
                     <xsl:value-of select="path:join(($output-dir, encode-for-uri($page/@key)))"/>
                 </xsl:when>
                 <xsl:otherwise>
-                    <xsl:value-of select="path:join(($output-dir, encode-for-uri($page/@key), 'index.html'))"/>
+                    <xsl:value-of select="path:join(($output-dir, encode-for-uri($page/@key), $default-index-name))"/>
                 </xsl:otherwise>
             </xsl:choose>
         </xsl:variable>
@@ -131,7 +133,18 @@
                 '..'"/>
         <xsl:variable name="down-segments" as="xs:string*"
             select="$target-segments[position() gt $common-length]"/>
-        <xsl:sequence select="path:join(('.', $up-segments, $down-segments))"/>
+        <xsl:variable name="target-path" as="xs:string" select="path:join(('.', $up-segments, $down-segments))"/>
+        <xsl:variable name="target-path-components" as="map(xs:string, xs:string?)" select="path:extract-filename-and-dir($target-path)"/>
+        <xsl:sequence>
+            <xsl:choose>
+                <xsl:when test="$target-path-components?filename => exists() and $target-path-components?filename = $default-index-name">
+                    <xsl:value-of select="$target-path-components?dir"/>
+                </xsl:when>
+                <xsl:otherwise>
+                    <xsl:value-of select="$target-path"/>
+                </xsl:otherwise>
+            </xsl:choose>
+        </xsl:sequence>
     </xsl:function>
     
     <!--
