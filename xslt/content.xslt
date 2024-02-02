@@ -63,6 +63,7 @@
                         select="'Specific content templates successfully applied to **' || ($page/@key, $page/@name)[1] || '**'"
                     />
                 </xsl:when>
+                <!-- If no specific template for a page is found, the page named 'default-content' will be applied -->
                 <xsl:otherwise>
                     <xsl:message
                         select="'Seems like there are no content templates for **' || ($page/@key, $page/@name)[1] || '**, applyling default content template.'"/>
@@ -80,7 +81,19 @@
         </xsl:result-document>
     </xsl:template>
 
-
+    
+    <!-- 
+        The fallback template, when not specific content-template was
+        found.
+        
+        @param $context The path of the current file to produce.
+        @param $img-path The path to the image-folder.
+        @param $output-dir The path to the output-dir.
+        @param $page The current context as element(pages:page)
+        @param $pages The structure of the application as element(pages:pages) 
+        @param $page-title The title of the application / the current page.
+        @param $stylesheets Path of stylesheets, which should be included from the static folder.
+    -->    
     <xsl:template match="xsl:template[@name = 'default-content']" name="default-content">
         <xsl:param name="context" as="xs:string"/>
         <xsl:param name="img-path" as="xs:string"/>
@@ -109,6 +122,17 @@
         </xsl:call-template>
     </xsl:template>
 
+    <!-- 
+        The template for the start-page / index-page.
+        
+        @param $context The path of the current file to produce.
+        @param $img-path The path to the image-folder.
+        @param $output-dir The path to the output-dir.
+        @param $page The current context as element(pages:page)
+        @param $pages The structure of the application as element(pages:pages) 
+        @param $page-title The title of the application / the current page.
+        @param $stylesheets Path of stylesheets, which should be included from the static folder.
+    -->  
     <xsl:template match="xsl:template[@name = 'index']" name="index">
         <xsl:param name="context" as="xs:string"/>
         <xsl:param name="img-path" as="xs:string"/>
@@ -136,6 +160,18 @@
         </xsl:call-template>
     </xsl:template>
 
+    <!-- 
+        Template for birth places.
+        
+        @param $context The path of the current file to produce.
+        @param $data The TEI-XML loaded data.
+        @param $img-path The path to the image-folder.
+        @param $output-dir The path to the output-dir.
+        @param $page The current context as element(pages:page)
+        @param $pages The structure of the application as element(pages:pages) 
+        @param $page-title The title of the application / the current page.
+        @param $stylesheets Path of stylesheets, which should be included from the static folder.
+    -->  
     <xsl:template match="xsl:template[@name = 'geburtsorte']" name="geburtsorte">
         <xsl:param name="context" as="xs:string"/>
         <xsl:param name="data" as="map(xs:string, document-node())"/>
@@ -222,6 +258,18 @@
         </xsl:call-template>
     </xsl:template>
 
+    <!-- 
+        Template for list of student.
+        
+        @param $context The path of the current file to produce.
+        @param $data The TEI-XML loaded data.
+        @param $img-path The path to the image-folder.
+        @param $output-dir The path to the output-dir.
+        @param $page The current context as element(pages:page)
+        @param $pages The structure of the application as element(pages:pages) 
+        @param $page-title The title of the application / the current page.
+        @param $stylesheets Path of stylesheets, which should be included from the static folder.
+    -->  
     <xsl:template match="xsl:template[@name = 'schueler']" name="schueler">
         <xsl:param name="context" as="xs:string"/>
         <xsl:param name="data" as="map(xs:string, document-node())"/>
@@ -302,6 +350,18 @@
         </xsl:for-each>
     </xsl:template>
 
+    <!-- 
+        Template for student-details.
+        
+        @param $context The path of the current file to produce.
+        @param $data The TEI-XML loaded data.
+        @param $img-path The path to the image-folder.
+        @param $output-dir The path to the output-dir.
+        @param $page The current context as element(pages:page)
+        @param $pages The structure of the application as element(pages:pages) 
+        @param $page-title The title of the application / the current page.
+        @param $stylesheets Path of stylesheets, which should be included from the static folder.
+    --> 
     <xsl:template match="xsl:template[@name = 'schueler-details']" name="schueler-details">
         <xsl:param name="context" as="xs:string"/>
         <xsl:param name="data" as="map(xs:string, document-node())"/>
