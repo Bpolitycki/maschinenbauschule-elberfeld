@@ -8,4 +8,4 @@ copy-assets:
 	@cp -r static build
 
 html: clean copy-assets
-	@saxon -s:xslt/pages.xml -xsl:xslt/pipeline.xslt base-uri=$(shell pwd)
+	@java -jar lib/saxon/saxon-he-12.4.jar -s:xslt/pages.xml -xsl:xslt/pipeline.xslt base-uri=$(shell pwd)

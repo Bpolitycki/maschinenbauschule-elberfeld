@@ -30,3 +30,9 @@ make html
 ```
 
 **Achtung**: Wird kein `make` verwendet, muss der Ordner `static` manuell in den Ausgabeordner (`build`) kopiert werden.
+
+Es wird empfohlen, die Transformation in einem Docker-Container auszuführen (umgeht Probleme mit Windows-Pfaden und stellt sicher, dass die Transformation auf verschiedenen Systemen konsistent ist). Hierzu kann (sofern Docker vorhanden ist) folgender Befehl verwendet werden:
+
+```bash
+docker compose up -d && docker compose exec -it pagebuilder make html
+```
