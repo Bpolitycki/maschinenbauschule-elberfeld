@@ -5,6 +5,8 @@
                 xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xs="http://www.w3.org/2001/XMLSchema"
                 xmlns:tei="http://www.tei-c.org/ns/1.0" exclude-result-prefixes="#all" version="3.0">
     
+    <xsl:param name="strip-default-index-name" as="xs:boolean" select="true()"/>
+    
     <xsl:variable name="default-index-name" select="'index.html'" as="xs:string"/>
     
     <!--
@@ -92,9 +94,13 @@
     -->
     <xsl:function name="path:create-default-build-path" as="xs:string">
         <xsl:param name="context" as="document-node()"/>
-        <xsl:variable name="doc-uri" as="xs:anyURI" select="document-uri($context)"/>
+        <xsl:variable name="doc-uri" as="xs:anyURI" select="base-uri($context)"/>
+        <xsl:variable name="context-dir" as="xs:string"
+            select="xs:string($doc-uri) => path:extract-filename-and-dir() => map:get('dir')"/>
+        <xsl:variable name="calculated-project-dir" as="xs:string"
+            select="($context-dir => path:tokenize())[position() lt last()] => path:join() => path:remove-file-scheme() => path:make-absolute()"/>
         <xsl:value-of
-            select="path:join((xs:string($doc-uri) => path:extract-filename-and-dir() => map:get('dir'), '..'))"
+            select="$calculated-project-dir"
             />
     </xsl:function>
     
@@ -109,7 +115,7 @@
         <xsl:param name="source-path" as="xs:string"/>
         <xsl:param name="target-path" as="xs:string"/>
         <xsl:variable name="source-segments" as="xs:string*" select="path:tokenize($source-path)"/>
-        <xsl:variable name="target-segments" as="xs:string*" select="path:tokenize($target-path)"/>        
+        <xsl:variable name="target-segments" as="xs:string*" select="path:tokenize($target-path)"/>
         <xsl:variable name="common-length" as="xs:integer">
             <xsl:iterate select="$source-segments">
                 <xsl:param name="index" as="xs:integer" select="1"/>
@@ -137,7 +143,7 @@
         <xsl:variable name="target-path-components" as="map(xs:string, xs:string?)" select="path:extract-filename-and-dir($target-path)"/>
         <xsl:sequence>
             <xsl:choose>
-                <xsl:when test="$target-path-components?filename => exists() and $target-path-components?filename = $default-index-name">
+                <xsl:when test="$target-path-components?filename => exists() and $target-path-components?filename = $default-index-name and $strip-default-index-name">
                     <xsl:value-of select="$target-path-components?dir"/>
                 </xsl:when>
                 <xsl:otherwise>
@@ -211,7 +217,7 @@
     -->
     <xsl:function name="path:remove-file-scheme" as="xs:string">
         <xsl:param name="input-path" as="xs:string"/>
-        <xsl:value-of select="$input-path => replace('^file://(.*)', '$1')"/>
+        <xsl:value-of select="$input-path => replace('^file://?(.*)', '$1')"/>
     </xsl:function>
     
     <xsl:function name="path:make-absolute" as="xs:string">
