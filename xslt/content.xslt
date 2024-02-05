@@ -1,25 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet xmlns="http://www.w3.org/1999/xhtml"
-    xmlns:html-components="http://www.w3.org/1999/xhtml/components"
-    xmlns:html="http://www.w3.org/1999/xhtml"
-    xmlns:iiif="http://www.dh.uni-wuppertal/ns/schueler/iiif"
-    xmlns:map="http://www.w3.org/2005/xpath-functions/map"
-    xmlns:pages="http://www.dh.uni-wuppertal/ns/schueler/pages"
-    xmlns:path="http://www.dh.uni-wuppertal/ns/schueler/path"
-    xmlns:persons="http://www.dh.uni-wuppertal/ns/schueler/persons"
-    xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xs="http://www.w3.org/2001/XMLSchema"
-    xmlns:tei="http://www.tei-c.org/ns/1.0" exclude-result-prefixes="#all" version="3.0">
-
+                xmlns:array="http://www.w3.org/2005/xpath-functions/array"
+                xmlns:html-components="http://www.w3.org/1999/xhtml/components"
+                xmlns:html="http://www.w3.org/1999/xhtml"
+                xmlns:iiif="http://www.dh.uni-wuppertal/ns/schueler/iiif"
+                xmlns:map="http://www.w3.org/2005/xpath-functions/map"
+                xmlns:pages="http://www.dh.uni-wuppertal/ns/schueler/pages"
+                xmlns:path="http://www.dh.uni-wuppertal/ns/schueler/path"
+                xmlns:persons="http://www.dh.uni-wuppertal/ns/schueler/persons"
+                xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+                xmlns:tei="http://www.tei-c.org/ns/1.0" exclude-result-prefixes="#all" version="3.0">
+    
     <xsl:output method="html"/>
-
+    
     <!-- path.xslt is imported here; so we can use the functions defined there -->
     <xsl:import href="components.xslt"/>
     <xsl:import href="iiif.xslt"/>
-
+    
     <xsl:import href="persons.xslt"/>
-
+    
     <xsl:variable name="self" select="document('')/*/xsl:template" as="element(xsl:template)*"/>
-
+    
     <!--
          This named template will create the content for a page, when it's called
          it will use all templates defined in **this** xslt-stylesheets.
@@ -32,7 +33,7 @@
          
          For parameters see below.
     -->
-
+    
     <xsl:template name="create-page">
         <xsl:param name="context" as="xs:string"/>
         <xsl:param name="data" as="map(xs:string, document-node())"/>
@@ -51,7 +52,7 @@
                         select="($self[@name = $page/@key], $self[@name = $page/@dynamic-view], $self[@name = $page/@name])[1]">
                         <xsl:with-param name="context" select="$context" as="xs:string"/>
                         <xsl:with-param name="data" select="$data"
-                            as="map(xs:string, document-node())"/>
+                                        as="map(xs:string, document-node())"/>
                         <xsl:with-param name="img-path" select="$img-path" as="xs:string"/>
                         <xsl:with-param name="output-dir" select="$output-dir" as="xs:string"/>
                         <xsl:with-param name="page" select="$page" as="element(pages:page)"/>
@@ -61,7 +62,7 @@
                     </xsl:apply-templates>
                     <xsl:message
                         select="'Specific content templates successfully applied to **' || ($page/@key, $page/@name)[1] || '**'"
-                    />
+                        />
                 </xsl:when>
                 <!-- If no specific template for a page is found, the page named 'default-content' will be applied -->
                 <xsl:otherwise>
@@ -80,20 +81,20 @@
             </xsl:choose>
         </xsl:result-document>
     </xsl:template>
-
     
-    <!-- 
-        The fallback template, when not specific content-template was
-        found.
-        
-        @param $context The path of the current file to produce.
-        @param $img-path The path to the image-folder.
-        @param $output-dir The path to the output-dir.
-        @param $page The current context as element(pages:page)
-        @param $pages The structure of the application as element(pages:pages) 
-        @param $page-title The title of the application / the current page.
-        @param $stylesheets Path of stylesheets, which should be included from the static folder.
-    -->    
+    
+    <!--
+         The fallback template, when not specific content-template was
+         found.
+         
+         @param $context The path of the current file to produce.
+         @param $img-path The path to the image-folder.
+         @param $output-dir The path to the output-dir.
+         @param $page The current context as element(pages:page)
+         @param $pages The structure of the application as element(pages:pages)
+         @param $page-title The title of the application / the current page.
+         @param $stylesheets Path of stylesheets, which should be included from the static folder.
+    -->
     <xsl:template match="xsl:template[@name = 'default-content']" name="default-content">
         <xsl:param name="context" as="xs:string"/>
         <xsl:param name="img-path" as="xs:string"/>
@@ -121,18 +122,18 @@
                 select="html-components:create-footer($context, $img-path)"/>
         </xsl:call-template>
     </xsl:template>
-
-    <!-- 
-        The template for the start-page / index-page.
-        
-        @param $context The path of the current file to produce.
-        @param $img-path The path to the image-folder.
-        @param $output-dir The path to the output-dir.
-        @param $page The current context as element(pages:page)
-        @param $pages The structure of the application as element(pages:pages) 
-        @param $page-title The title of the application / the current page.
-        @param $stylesheets Path of stylesheets, which should be included from the static folder.
-    -->  
+    
+    <!--
+         The template for the start-page / index-page.
+         
+         @param $context The path of the current file to produce.
+         @param $img-path The path to the image-folder.
+         @param $output-dir The path to the output-dir.
+         @param $page The current context as element(pages:page)
+         @param $pages The structure of the application as element(pages:pages)
+         @param $page-title The title of the application / the current page.
+         @param $stylesheets Path of stylesheets, which should be included from the static folder.
+    -->
     <xsl:template match="xsl:template[@name = 'index']" name="index">
         <xsl:param name="context" as="xs:string"/>
         <xsl:param name="img-path" as="xs:string"/>
@@ -141,79 +142,77 @@
         <xsl:param name="pages" as="element(pages:pages)"/>
         <xsl:param name="page-title" as="xs:string"/>
         <xsl:param name="stylesheets" as="xs:string"/>
+        <xsl:variable name="volumes" as="array(map(xs:string, xs:string))" select="[
+                map { 'number': '1,1', 'dep': 'Tiefbau', 'period': '1898–1920', 'signature': '110300030007', 'students': '865', 'img': 'Band_1_1_cover.jpg' },
+                map { 'number': '1,2', 'dep': 'Tiefbau', 'period': '1920–1938', 'signature': '110300030006', 'students': '985', 'img': 'Band_1_2_cover.jpg' },
+                map { 'number': '2,1', 'dep': 'Hochbau', 'period': '1900–1920', 'signature': '110300030008', 'students': '820', 'img': 'Band_2_1_cover.jpg' },
+                map { 'number': '2,2', 'dep': 'Hochbau', 'period': '1914–1934', 'signature': '110300030009', 'students': '906' , 'img': 'Band_2_2_cover.jpg' },
+                map { 'number': '3,1', 'dep': 'Metallbau', 'period': '1900–1913', 'signature': '110300030010', 'students': '1150', 'img': 'Band_3_1_cover.jpg' },
+                map { 'number': '3,2', 'dep': 'Metallbau', 'period': '1913–1943', 'signature': '110300030011', 'students': '284', 'img': 'Band_3_2_cover.jpg' }
+            ]"/>
         <xsl:variable name="default-content" as="element(html:main)">
             <main class="container">
                 <h2>
                     <xsl:value-of select="$page-title"/>
                 </h2>
-                <p>Zu den Vorgängereinrichtungen der Bergischen Universität Wuppertal gehört die zunächst "königliche" Maschinenbauschule in zunächst "Elberfeld Barmen", später Wuppertal. 
-                    Von dieser Anstalt sind insgesamt sechs Bände "Matrikel" überliefert, die sich heute im Archiv der BUW befinden.</p>
-                <table>
-                    <tr>
-                        <th>Band</th>
-                        <th>Abteilung</th>
-                        <th>Laufzeit</th>
-                        <th>Signatur</th>
-                        <th>Schüler</th>
-                    </tr>
-                    <tr>
-                        <td>1,1</td>
-                        <td>Tiefbau</td>
-                        <td>1898-1920</td>
-                        <td>110300030007</td>
-                        <td>865</td>
-                    </tr>
-                    <tr>
-                        <td>1,2</td>
-                        <td>Tiefbau</td>
-                        <td>1920-1938</td>
-                        <td>110300030006</td>
-                        <td>985</td>
-                    </tr>
-                    <tr>
-                        <td>2,1</td>
-                        <td>Hochbau</td>
-                        <td>1900-1920</td>
-                        <td>110300030008</td>
-                        <td>820</td>
-                    </tr>
-                    <tr>
-                        <td>2,2</td>
-                        <td>Hochbau</td>
-                        <td>1914-1934</td>
-                        <td>110300030009</td>
-                        <td>906</td>
-                    </tr>
-                    <tr>
-                        <td>3,1</td>
-                        <td>Metallbau</td>
-                        <td>1900-1913</td>
-                        <td>110300030010</td>
-                        <td>1150</td>
-                    </tr>
-                    <tr>
-                        <td>3,2</td>
-                        <td>Metallbau</td>
-                        <td>1913-1943</td>
-                        <td>110300030011</td>
-                        <td>284</td>
-                    </tr>
-                </table>
-                
-                <table>
-                    <tr>
-                        <!-- die images hier via IIIF einzubinden erscheint mir overdosed, PS 
-                            das wäre dann z.B. https://iiif.dh-projekte.uni-wuppertal.de/iiif/2/schuelerverzeichnisse%2F110300030007-001.jpg/3600,160,3670,5420/max/0/default.jpg -->
-                        <td><img src="../static/images/Band_1_1_cover.jpg" alt="Cover Band 1,1" title="Cover Band 1,1"/></td>
-                        <td><img src="../static/images/Band_2_1_cover.jpg" alt="Cover Band 1,1" title="Cover Band 2,1"/></td>
-                        <td><img src="../static/images/Band_3_1_cover.jpg" alt="Cover Band 1,1" title="Cover Band 3,1"/></td>
-                    </tr>
-                    <tr>
-                        <td><img src="../static/images/Band_1_2_cover.jpg" alt="Cover Band 1,1" title="Cover Band 1,2"/></td>
-                        <td><img src="../static/images/Band_2_2_cover.jpg" alt="Cover Band 1,1" title="Cover Band 2,2"/></td>
-                        <td><img src="../static/images/Band_3_2_cover.jpg" alt="Cover Band 1,1" title="Cover Band 3,2"/></td>
-                    </tr>
-                </table>
+                <p>
+                    Zu den Vorgängereinrichtungen der <a href="https://www.uni-wuppertal.de/">Bergischen Universität Wuppertal (BUW)</a> gehört die zunächst
+                    <i>königliche Maschinenbauschule</i> in zunächst <i>Elberfeld Barmen</i>, später Wuppertal.
+                    Von dieser Anstalt sind insgesamt sechs Bände (Matrikel) überliefert, die sich heute im Archiv der BUW befinden.
+                    <a href="{path:get-relative-path($context, $pages//pages:page[@name = 'About']/@key)}" title="Über das Projekt">Mehr erfahren</a>
+                </p>
+                <div class="img-card-grid">
+                    <xsl:for-each select="array:flatten($volumes)">
+                        <xsl:variable name="dep" as="xs:string" select="map:get(., 'number')"/>
+                        <xsl:variable name="title" as="xs:string" select="'Cover Band ' || $dep"/>
+                        <xsl:variable name="volume-page" as="element(pages:page)?" select="$pages//pages:page[contains(@name, $dep)][not(@menu-only)]"/>
+                        <xsl:variable name="card-img">
+                            <img class="{if (exists($volume-page)) then 'is-available' else 'not-ready'}"
+                                 src="{path:get-relative-path($context, path:join(($img-path, map:get(., 'img'))))}" alt="{$title}" title="{$title}"/>
+                        </xsl:variable>
+                        <article>
+                            <header>
+                                <h4>
+                                    <xsl:value-of select="'Band ' || map:get(., 'number')"/>
+                                </h4>
+                            </header>
+                            <xsl:choose>
+                                <xsl:when test="exists($volume-page)">
+                                    <a href="{
+                                        path:get-relative-path(
+                                            $context,
+                                            path:join(
+                                                ($volume-page/ancestor::pages:page[@key] ! ./@key, $volume-page/@key)
+                                            )
+                                        )}"
+                                       title="{'Details Band '  || $dep}"
+                                        >
+                                        <xsl:sequence select="$card-img"/>
+                                    </a>
+                                </xsl:when>
+                                <xsl:otherwise>
+                                    <xsl:sequence select="$card-img"/>
+                                </xsl:otherwise>
+                            </xsl:choose>
+                            <footer>
+                                <ul>
+                                    <li>
+                                        <xsl:value-of select="'Abteilung ' || $dep "/>
+                                    </li>
+                                    <li>
+                                        <xsl:value-of select="'Laufzeit ' || map:get(., 'period')"/>
+                                    </li>
+                                    <li>
+                                        <xsl:value-of select="'Signatur ' || map:get(., 'signature')"/>
+                                    </li>
+                                    <li>
+                                        <xsl:value-of select="'Schüler ' || map:get(., 'students')"/>
+                                    </li>
+                                </ul>
+                            </footer>
+                        </article>
+                    </xsl:for-each>
+                </div>
             </main>
         </xsl:variable>
         <xsl:call-template name="html-components:create-page">
@@ -226,19 +225,19 @@
                 select="html-components:create-footer($context, $img-path)"/>
         </xsl:call-template>
     </xsl:template>
-
-    <!-- 
-        Template for birth places.
-        
-        @param $context The path of the current file to produce.
-        @param $data The TEI-XML loaded data.
-        @param $img-path The path to the image-folder.
-        @param $output-dir The path to the output-dir.
-        @param $page The current context as element(pages:page)
-        @param $pages The structure of the application as element(pages:pages) 
-        @param $page-title The title of the application / the current page.
-        @param $stylesheets Path of stylesheets, which should be included from the static folder.
-    -->  
+    
+    <!--
+         Template for birth places.
+         
+         @param $context The path of the current file to produce.
+         @param $data The TEI-XML loaded data.
+         @param $img-path The path to the image-folder.
+         @param $output-dir The path to the output-dir.
+         @param $page The current context as element(pages:page)
+         @param $pages The structure of the application as element(pages:pages)
+         @param $page-title The title of the application / the current page.
+         @param $stylesheets Path of stylesheets, which should be included from the static folder.
+    -->
     <xsl:template match="xsl:template[@name = 'geburtsorte']" name="geburtsorte">
         <xsl:param name="context" as="xs:string"/>
         <xsl:param name="data" as="map(xs:string, document-node())"/>
@@ -254,7 +253,7 @@
              tagged as a place, but in future versions the approach
              may break / return wrong results -->
         <xsl:variable name="places" as="element(tei:place)+" select="
-                map:for-each($data, function ($_, $value) {
+            map:for-each($data, function ($_, $value) {
                     $value//tei:place[parent::tei:listPlace]
                 })"/>
         <xsl:variable name="places-as-map" as="map(*)+">
@@ -275,7 +274,7 @@
         <xsl:variable name="page-script" as="element(html:script)">
             <script>
                 const places = <xsl:value-of select="
-                        '[' || string-join(for $p in $places-as-map
+                    '[' || string-join(for $p in $places-as-map
                         return
                             serialize($p, map {'method': 'json'}), ',') || ']'"/>;
                 
@@ -321,22 +320,22 @@
             </xsl:with-param>
             <xsl:with-param name="footer"
                 select="html-components:create-footer($context, $img-path, ($leaflet-scripts, $page-script))"
-            />
+                />
         </xsl:call-template>
     </xsl:template>
-
-    <!-- 
-        Template for list of student.
-        
-        @param $context The path of the current file to produce.
-        @param $data The TEI-XML loaded data.
-        @param $img-path The path to the image-folder.
-        @param $output-dir The path to the output-dir.
-        @param $page The current context as element(pages:page)
-        @param $pages The structure of the application as element(pages:pages) 
-        @param $page-title The title of the application / the current page.
-        @param $stylesheets Path of stylesheets, which should be included from the static folder.
-    -->  
+    
+    <!--
+         Template for list of student.
+         
+         @param $context The path of the current file to produce.
+         @param $data The TEI-XML loaded data.
+         @param $img-path The path to the image-folder.
+         @param $output-dir The path to the output-dir.
+         @param $page The current context as element(pages:page)
+         @param $pages The structure of the application as element(pages:pages)
+         @param $page-title The title of the application / the current page.
+         @param $stylesheets Path of stylesheets, which should be included from the static folder.
+    -->
     <xsl:template match="xsl:template[@name = 'schueler']" name="schueler">
         <xsl:param name="context" as="xs:string"/>
         <xsl:param name="data" as="map(xs:string, document-node())"/>
@@ -347,7 +346,7 @@
         <xsl:param name="page-title" as="xs:string"/>
         <xsl:param name="stylesheets" as="xs:string"/>
         <xsl:variable name="surnames" as="element(tei:surname)*" select="
-                map:for-each($data, function ($_, $value) {
+            map:for-each($data, function ($_, $value) {
                     $value//tei:persName/tei:surname
                 })"/>
         <xsl:variable name="persons-list" as="map(xs:string, map(xs:string, item()))"
@@ -384,12 +383,12 @@
                                 <xsl:for-each select="current-group()">
                                     <xsl:sort select="."/>
                                     <xsl:sequence select="
-                                            map:get(
+                                        map:get(
                                             $persons-list,
                                             generate-id(.)
-                                            )
-                                            => map:get('entry')"
-                                    />
+                                        )
+                                        => map:get('entry')"
+                                        />
                                 </xsl:for-each>
                             </ul>
                         </xsl:for-each-group>
@@ -408,27 +407,27 @@
                 <xsl:with-param name="img-path" select="$img-path" as="xs:string"/>
                 <xsl:with-param name="output-dir" select="$output-dir" as="xs:string"/>
                 <xsl:with-param name="page" select="$persons-list => map:get(.) => map:get('page')"
-                    as="element(pages:page)"/>
+                                as="element(pages:page)"/>
                 <xsl:with-param name="pages" select="$page/ancestor::pages:pages"
-                    as="element(pages:pages)"/>
+                                as="element(pages:pages)"/>
                 <xsl:with-param name="page-title" select="$page-title" as="xs:string"/>
                 <xsl:with-param name="stylesheets" select="$stylesheets" as="xs:string"/>
             </xsl:call-template>
         </xsl:for-each>
     </xsl:template>
-
-    <!-- 
-        Template for student-details.
-        
-        @param $context The path of the current file to produce.
-        @param $data The TEI-XML loaded data.
-        @param $img-path The path to the image-folder.
-        @param $output-dir The path to the output-dir.
-        @param $page The current context as element(pages:page)
-        @param $pages The structure of the application as element(pages:pages) 
-        @param $page-title The title of the application / the current page.
-        @param $stylesheets Path of stylesheets, which should be included from the static folder.
-    --> 
+    
+    <!--
+         Template for student-details.
+         
+         @param $context The path of the current file to produce.
+         @param $data The TEI-XML loaded data.
+         @param $img-path The path to the image-folder.
+         @param $output-dir The path to the output-dir.
+         @param $page The current context as element(pages:page)
+         @param $pages The structure of the application as element(pages:pages)
+         @param $page-title The title of the application / the current page.
+         @param $stylesheets Path of stylesheets, which should be included from the static folder.
+    -->
     <xsl:template match="xsl:template[@name = 'schueler-details']" name="schueler-details">
         <xsl:param name="context" as="xs:string"/>
         <xsl:param name="data" as="map(xs:string, document-node())"/>
@@ -439,14 +438,14 @@
         <xsl:param name="page-title" as="xs:string"/>
         <xsl:param name="stylesheets" as="xs:string"/>
         <xsl:variable name="surname" as="element(tei:surname)" select="
-                map:for-each($data, function ($_, $value) {
+            map:for-each($data, function ($_, $value) {
                     $value//tei:persName/tei:surname
                 })
-                => filter(
+            => filter(
                 function ($i) {
                     generate-id($i) eq $page/@key
                 }
-                )"/>
+            )"/>
         <xsl:variable name="iiif-img-points" as="xs:string"
             select="iiif:get-points-for-cell-or-row($surname/ancestor::tei:cell)"/>
         <xsl:variable name="img-id" as="xs:string"
@@ -470,7 +469,7 @@
                         <ul>
                             <li>Laufende Nummer: <xsl:value-of
                                     select="normalize-space($surname/ancestor::tei:row/tei:cell[1]/string())"
-                                /></li>
+                                    /></li>
                             <li>Mehr Details dann hier ...</li>
                         </ul>
                     </section>
@@ -480,6 +479,6 @@
                 select="html-components:create-footer($context, $img-path)"/>
         </xsl:call-template>
     </xsl:template>
-
-
+    
+    
 </xsl:stylesheet>

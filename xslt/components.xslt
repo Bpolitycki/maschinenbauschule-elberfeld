@@ -165,7 +165,7 @@
         <xsl:param name="nav" as="element(html:header)"/>
         <xsl:param name="content" as="element()"/>
         <xsl:param name="footer" as="element()+"/>
-        <html>
+        <html data-theme="light">
             <xsl:sequence select="$page-head"/>
             <body>
                 <xsl:sequence select="($nav, $content, $footer)"/>
