@@ -146,7 +146,74 @@
                 <h2>
                     <xsl:value-of select="$page-title"/>
                 </h2>
-                <p>Hier entsteht eine Beschreibung</p>
+                <p>Zu den Vorgängereinrichtungen der Bergischen Universität Wuppertal gehört die zunächst "königliche" Maschinenbauschule in zunächst "Elberfeld Barmen", später Wuppertal. 
+                    Von dieser Anstalt sind insgesamt sechs Bände "Matrikel" überliefert, die sich heute im Archiv der BUW befinden.</p>
+                <table>
+                    <tr>
+                        <th>Band</th>
+                        <th>Abteilung</th>
+                        <th>Laufzeit</th>
+                        <th>Signatur</th>
+                        <th>Schüler</th>
+                    </tr>
+                    <tr>
+                        <td>1,1</td>
+                        <td>Tiefbau</td>
+                        <td>1898-1920</td>
+                        <td>110300030007</td>
+                        <td>865</td>
+                    </tr>
+                    <tr>
+                        <td>1,2</td>
+                        <td>Tiefbau</td>
+                        <td>1920-1938</td>
+                        <td>110300030006</td>
+                        <td>985</td>
+                    </tr>
+                    <tr>
+                        <td>2,1</td>
+                        <td>Hochbau</td>
+                        <td>1900-1920</td>
+                        <td>110300030008</td>
+                        <td>820</td>
+                    </tr>
+                    <tr>
+                        <td>2,2</td>
+                        <td>Hochbau</td>
+                        <td>1914-1934</td>
+                        <td>110300030009</td>
+                        <td>906</td>
+                    </tr>
+                    <tr>
+                        <td>3,1</td>
+                        <td>Metallbau</td>
+                        <td>1900-1913</td>
+                        <td>110300030010</td>
+                        <td>1150</td>
+                    </tr>
+                    <tr>
+                        <td>3,2</td>
+                        <td>Metallbau</td>
+                        <td>1913-1943</td>
+                        <td>110300030011</td>
+                        <td>284</td>
+                    </tr>
+                </table>
+                
+                <table>
+                    <tr>
+                        <!-- die images hier via IIIF einzubinden erscheint mir overdosed, PS 
+                            das wäre dann z.B. https://iiif.dh-projekte.uni-wuppertal.de/iiif/2/schuelerverzeichnisse%2F110300030007-001.jpg/3600,160,3670,5420/max/0/default.jpg -->
+                        <td><img src="../static/images/Band_1_1_cover.jpg" alt="Cover Band 1,1" title="Cover Band 1,1"/></td>
+                        <td><img src="../static/images/Band_2_1_cover.jpg" alt="Cover Band 1,1" title="Cover Band 2,1"/></td>
+                        <td><img src="../static/images/Band_3_1_cover.jpg" alt="Cover Band 1,1" title="Cover Band 3,1"/></td>
+                    </tr>
+                    <tr>
+                        <td><img src="../static/images/Band_1_2_cover.jpg" alt="Cover Band 1,1" title="Cover Band 1,2"/></td>
+                        <td><img src="../static/images/Band_2_2_cover.jpg" alt="Cover Band 1,1" title="Cover Band 2,2"/></td>
+                        <td><img src="../static/images/Band_3_2_cover.jpg" alt="Cover Band 1,1" title="Cover Band 3,2"/></td>
+                    </tr>
+                </table>
             </main>
         </xsl:variable>
         <xsl:call-template name="html-components:create-page">
