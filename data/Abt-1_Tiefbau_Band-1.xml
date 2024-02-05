@@ -57103,10 +57103,9 @@
                      <date when="1880-11-10" type="birth">10.11.1880</date>
                   </cell>
                   <cell facs="#facs_19_t1c54" n="5" rend="0000">
-                     <placeName ref="#place-84844952">
-                        <lb facs="#facs_19_line_1700847657770_633" n="N001"/>St.
-                                        Wendel <lb facs="#facs_19_t1c54_tl_2" n="N002"/>Kreis St.
-                                        Wendel</placeName>
+                        <placeName ref="#place-10520217">
+                        <lb facs="#facs_19_line_1700847657770_633" n="N001"/>St. Wendel 
+                              <lb facs="#facs_19_t1c54_tl_2" n="N002"/>Kreis St. Wendel</placeName>
                   </cell>
                   <cell facs="#facs_19_t1c55" n="6" rend="0000">
                      <lb facs="#facs_19_t1c55_tl_1" n="N001"/>
@@ -57330,8 +57329,8 @@
                   </cell>
                   <cell facs="#facs_19_t1c114" n="5" rend="0000">
                      <placeName ref="#place-14159209">
-                        <lb facs="#facs_19_t1c114_tl_1" n="N001"/>Roda <lb facs="#facs_19_line_1700848602515_846" n="N002"/>Kreis
-                                        Ilmenau</placeName>
+                        <lb facs="#facs_19_t1c114_tl_1" n="N001"/>Roda 
+                           <lb facs="#facs_19_line_1700848602515_846" n="N002"/>Kreis Ilmenau</placeName>
                   </cell>
                   <cell facs="#facs_19_t1c115" n="6" rend="0000">
                      <lb facs="#facs_19_t1c115_tl_1" n="N001"/>
@@ -60368,7 +60367,7 @@
                   <cell facs="#facs_26_TableCell_1698221473490_6602" n="1" rend="0000">
                      <lb facs="#facs_26_TableCell_1698221473490_6602_tl_1" n="N001"/>
                      <persName>
-                        <surname>Andreesen</surname>, <forename>Fritz</forename>
+                        <surname>Andreasen</surname>, <forename>Fritz</forename>
                      </persName>
                   </cell>
                   <cell facs="#facs_26_TableCell_1698221468564_6536" n="2" rend="0000">
@@ -60385,7 +60384,7 @@
                   </cell>
                   <cell facs="#facs_26_TableCell_1698221453592_6338" n="5" rend="0000">
                      <lb facs="#facs_26_TableCell_1698221453592_6338_tl_1" n="N001"/>
-                     <persName>Heinrich Andreesen</persName>
+                     <persName>Heinz Andreasen</persName>
                      <lb facs="#facs_26_TableCell_1698221453592_6338_tl_2" n="N002"/>Landwirt</cell>
                   <cell facs="#facs_26_TableCell_1698221447975_6272" n="6" rend="0000">
                      <lb facs="#facs_26_TableCell_1698221447975_6272_tl_1" n="N001"/>Seriem <lb facs="#facs_26_TableCell_1698221447975_6272_tl_2" n="N002"/>Kreis Wittmund</cell>
@@ -64251,14 +64250,15 @@
                   </cell>
                   <cell facs="#facs_35_TableCell_1698223373836_13796" n="4" rend="0000">
                      <placeName ref="#place-85998983">
-                        <lb facs="#facs_35_TableCell_1698223373836_13796_tl_1" n="N001"/>Stockduin <lb facs="#facs_35_TableCell_1698223373836_13796_tl_2" n="N002"/>Kreis Solingen</placeName>
+                        <lb facs="#facs_35_TableCell_1698223373836_13796_tl_1" n="N001"/>Stockdum 
+                           <lb facs="#facs_35_TableCell_1698223373836_13796_tl_2" n="N002"/>Kreis Solingen</placeName>
                   </cell>
                   <cell facs="#facs_35_TableCell_1698223369885_13730" n="5" rend="0000">
                      <lb facs="#facs_35_TableCell_1698223369885_13730_tl_1" n="N001"/>
                      <persName>W. Overberg</persName>
                      <lb facs="#facs_35_TableCell_1698223369885_13730_tl_2" n="N002"/>Hauptlehrer</cell>
                   <cell facs="#facs_35_TableCell_1698223365771_13664" n="6" rend="0000">
-                     <lb facs="#facs_35_TableCell_1698223365771_13664_tl_1" n="N001"/>Stockduin</cell>
+                     <lb facs="#facs_35_TableCell_1698223365771_13664_tl_1" n="N001"/>Stockdum</cell>
                   <cell facs="#facs_35_TableCell_1698223361852_13598" n="7" rend="0000">
                      <lb facs="#facs_35_TableCell_1698223361852_13598_tl_1" n="N001"/>Realschule</cell>
                   <cell facs="#facs_35_TableCell_1698223358928_13532" n="8" rend="0000">
@@ -67895,7 +67895,9 @@
                   </cell>
                   <cell facs="#facs_43_TableCell_1698224963385_20288" n="4" rend="0000">
                      <placeName ref="#place-31542521">
-                        <lb facs="#facs_43_TableCell_1698224963385_20288_tl_1" n="N001"/>Rodenbach <lb facs="#facs_43_TableCell_1698224963385_20288_tl_2" n="N002"/>Dill-Kreis <lb facs="#facs_43_TableCell_1698224963385_20288_tl_3" n="N003"/>Bez. Wiesbaden</placeName>
+                        <lb facs="#facs_43_TableCell_1698224963385_20288_tl_1" n="N001"/>Rodenbach 
+                        <lb facs="#facs_43_TableCell_1698224963385_20288_tl_2" n="N002"/>Dill-Kreis 
+                        <lb facs="#facs_43_TableCell_1698224963385_20288_tl_3" n="N003"/>Bez. Wiesbaden</placeName>
                   </cell>
                   <cell facs="#facs_43_TableCell_1698224960150_20222" n="5" rend="0000">
                      <lb facs="#facs_43_TableCell_1698224960150_20222_tl_1" n="N001"/>
@@ -76297,7 +76299,9 @@
                   </cell>
                   <cell facs="#facs_62_t1c53" n="4" rend="0000">
                      <placeName ref="#place-17241028">
-                        <lb facs="#facs_62_t1c53_tl_1" n="N001"/>Sigompulan <lb facs="#facs_62_t1c53_tl_2" n="N002"/>auf <lb facs="#facs_62_t1c53_tl_3" n="N003"/>Sumatra</placeName>
+                        <lb facs="#facs_62_t1c53_tl_1" n="N001"/>Sigompulan 
+                        <lb facs="#facs_62_t1c53_tl_2" n="N002"/>auf 
+                        <lb facs="#facs_62_t1c53_tl_3" n="N003"/>Sumatra</placeName>
                   </cell>
                   <cell facs="#facs_62_t1c54" n="5" rend="0000">
                      <lb facs="#facs_62_t1c54_tl_1" n="N001"/>Mutter: <persName>Witwe
@@ -82512,21 +82516,19 @@
                   </cell>
                   <cell facs="#facs_75_t1c113" n="4" rend="0000">
                      <placeName ref="#place-15655952">
-                        <lb facs="#facs_75_t1c113_tl_1" n="N001"/>Zeitz <lb facs="#facs_75_t1c113_tl_2" n="N002"/>Kreis
-                                        Sachen</placeName>
+                        <lb facs="#facs_75_t1c113_tl_1" n="N001"/>Zeitz <lb facs="#facs_75_t1c113_tl_2" n="N002"/>Prov. Sachsen</placeName>
                   </cell>
                   <cell facs="#facs_75_t1c114" n="5" rend="0000">
                      <lb facs="#facs_75_t1c114_tl_1" n="N001"/>
-                     <persName>Franz
-                                        Thoss</persName>
+                     <persName>Franz Thoss</persName>
                      <lb facs="#facs_75_t1c114_tl_2" n="N002"/>Obergütervorsteher</cell>
                   <cell facs="#facs_75_t1c115" n="6" rend="0000">
-                     <lb facs="#facs_75_t1c115_tl_1" n="N001"/>Haan <lb facs="#facs_75_t1c115_tl_2" n="N002"/>Kaiserstr. 20.</cell>
+                     <lb facs="#facs_75_t1c115_tl_1" n="N001"/>Haan <lb facs="#facs_75_t1c115_tl_2" n="N002"/>Kaiserstr. (?) 20.</cell>
                   <cell facs="#facs_75_t1c116" n="7" rend="0000">
-                     <lb facs="#facs_75_t1c116_tl_1" n="N001"/>Realschule: <lb facs="#facs_75_t1c116_tl_2" n="N002"/>Ohligs. Wald. <lb facs="#facs_75_t1c116_tl_3" n="N003"/>bis einschl.
-                                   H.II.</cell>
+                     <lb facs="#facs_75_t1c116_tl_1" n="N001"/>Realschule: <lb facs="#facs_75_t1c116_tl_2" n="N002"/>Ohligs. Wald. 
+                        <lb facs="#facs_75_t1c116_tl_3" n="N003"/>bis einschl. H. II.</cell>
                   <cell facs="#facs_75_t1c117" n="8" rend="0000">
-                     <lb facs="#facs_75_t1c117_tl_1" n="N001"/>27.</cell>
+                     <lb facs="#facs_75_t1c117_tl_1" n="N001"/>27</cell>
                   <cell facs="#facs_75_t1c118" n="9" rend="0000">
                      <lb facs="#facs_75_t1c118_tl_1" n="N001"/>
                      <date type="entry" when="1919-01-04" ana="1918-WS HM-5">04.01.1919</date>
@@ -89513,21 +89515,21 @@
       <listPlace>
          <place xml:id="place-53528846">
             <placeName>Aachen</placeName>
-            <geo cert="low">50.753889 6.241944</geo>
+            <geo cert="high">50.753889 6.241944</geo>
          </place>
          <place xml:id="place-63224088">
             <placeName>Ahaus</placeName>
-            <geo cert="low">52.066667 7</geo>
+               <geo cert="high">52.075556 7.006667</geo>
          </place>
          <place xml:id="place-37397840">
             <placeName>Ahausen</placeName>
             <settlement type="district">Kreis Bersenbrück</settlement>
-            <geo cert="mid">50.5 8.283333</geo>
+               <geo cert="high">52.075556 7.006667</geo>
          </place>
          <place xml:id="place-12267713">
             <placeName>Ahnsen</placeName>
             <settlement type="district">Kreis Bückeburg</settlement>
-            <geo cert="mid">52.266667 9.1</geo>
+               <geo cert="high">52.254444 9.101111</geo>
          </place>
          <place xml:id="place-55321208">
             <placeName>Alfeld an der Leine</placeName>
@@ -89555,27 +89557,30 @@
          <place xml:id="place-95757210">
             <placeName>Alt-Flemmingen</placeName>
             <settlement type="district">Kreis Naumburg an der Saale</settlement>
+               <geo cert="high">51.132222 11.768333</geo>
          </place>
          <place xml:id="place-42381688">
             <placeName>Altona</placeName>
             <settlement type="district">Kreis Altona</settlement>
-            <geo cert="mid">41.35 -85.15</geo>
+               <geo cert="mid">53.55 9.93</geo>
          </place>
          <place xml:id="place-58692592">
             <placeName>Altona-Ottensen</placeName>
             <settlement>Kreis Altona</settlement>
+               <geo cert="high">53.554 9.91776</geo>
          </place>
          <place xml:id="place-28310347">
             <placeName>Anholt</placeName>
             <settlement type="district">Kreis Borken</settlement>
+               <geo cert="high">51.850556 6.4261</geo>
          </place>
          <place xml:id="place-53768590">
             <placeName>Arnsberg</placeName>
-            <geo cert="low">37.5667 -89.7667</geo>
+               <geo cert="high">51.396667 8.064667</geo>
          </place>
          <place xml:id="place-81416026">
             <placeName>Arnstadt</placeName>
-            <geo cert="low">50.833333 10.95</geo>
+               <geo cert="high">50.834 10.95</geo>
          </place>
          <place xml:id="place-57304494">
             <placeName>Arolsen</placeName>
@@ -90720,12 +90725,12 @@
          <place xml:id="place-14159209">
             <placeName>Roda</placeName>
             <settlement type="district">Kreis Ilmenau</settlement>
-            <geo cert="mid">31.912914 70.549785</geo>
+               <geo cert="high">50.696944 10.891389</geo>
          </place>
          <place xml:id="place-31542521">
-            <placeName>Rodenbach Dill-Kreis</placeName>
-            <settlement type="district">Bezirk Wiesbaden</settlement>
-            <geo cert="mid">50.3 8.95</geo>
+            <placeName>Rodenbach</placeName>
+               <settlement type="district">Dill-Kreis, Bezirk Wiesbaden</settlement>
+               <geo cert="high">50.771667 8.209167</geo>
          </place>
          <place xml:id="place-90672002">
             <placeName>Roggendorf</placeName>
@@ -90772,7 +90777,8 @@
             <geo cert="mid">51.5167 7.0833</geo>
          </place>
          <place xml:id="place-16746713">
-            <placeName>Schöller Kreis Mettmann</placeName>
+            <placeName>Schöller</placeName>
+               <settlement type="district">Kreis Mettmann</settlement>
             <geo cert="mid">51.233333 7.016667</geo>
          </place>
          <place xml:id="place-9729531">
@@ -90815,6 +90821,7 @@
          </place>
          <place xml:id="place-17241028">
             <placeName>Sigompulan auf Sumatra</placeName>
+               <geo cert="mid">2.255931250857871, 98.88867317470171</geo>
          </place>
          <place xml:id="place-76518037">
             <placeName>Sinzig</placeName>
@@ -90837,7 +90844,8 @@
             <geo cert="low">51.170278 7.063611</geo>
          </place>
          <place xml:id="place-5001259">
-            <placeName>Sonneberg Sachsen-Meiningen</placeName>
+            <placeName>Sonneberg</placeName>
+               <settlement>Sachsen-Meiningen</settlement>
             <geo cert="mid">50.429444 11.147222</geo>
          </place>
          <place xml:id="place-14397726">
@@ -90852,24 +90860,23 @@
          </place>
          <place xml:id="place-47234479">
             <placeName>Sankt Johann</placeName>
-            <settlement type="district">Krseis Saarbrücken</settlement>
-            <geo cert="mid">47.8667 15.5833</geo>
+            <settlement type="district">Kreis Saarbrücken</settlement>
+               <geo cert="mid">49.232658 6.996285</geo>
          </place>
          <place xml:id="place-10520217">
-            <placeName>St. Wendel Kr. St. Wendel</placeName>
-            <geo cert="mid">50.183 2.166</geo>
-         </place>
-         <place xml:id="place-84844952">
-            <placeName>St. Wendel Kreis St. Wendel</placeName>
-            <geo cert="mid">50.183 2.166</geo>
+            <placeName>St. Wendel</placeName>
+               <settlement>Kr. St. Wendel</settlement>
+               <geo cert="high">49.468056 7.1725</geo>
          </place>
          <place xml:id="place-67518247">
-            <placeName>Stadt-Lengsfeld Krs. Eisenach</placeName>
+            <placeName>Stadt-Lengsfeld</placeName>
+               <settlement>Krs. Eisenach</settlement>
+               <geo cert="high">50.782222 10.129722</geo>
          </place>
          <place xml:id="place-50601744">
             <placeName>Steele</placeName>
             <settlement type="district">Kreis Essen</settlement>
-            <geo cert="mid">40.0333 -97.0167</geo>
+               <geo cert="high">51.449444 7.076389</geo>
          </place>
          <place xml:id="place-42204442">
             <placeName>Steina</placeName>
@@ -90879,11 +90886,12 @@
          <place xml:id="place-62155314">
             <placeName>Stendal</placeName>
             <settlement type="district">Kreis Stendal</settlement>
-            <geo cert="mid">38.2667 -87.1333</geo>
+               <geo cert="high">52.605278 11.86</geo>
          </place>
          <place xml:id="place-85998983">
-            <placeName>Stockduin</placeName>
+            <placeName>Stockdum</placeName>
             <settlement type="district">Kreis Solingen</settlement>
+               <geo cert="mid>51.183056 7.080833</geo>
          </place>
          <place xml:id="place-14903752">
             <placeName>Straßburg im Elsass</placeName>
@@ -91137,7 +91145,7 @@
          </place>
          <place xml:id="place-15655952">
             <placeName>Zeitz</placeName>
-            <settlement type="district">Kreis Sachen</settlement>
+            <settlement type="district">Provinz Sachsen</settlement>
             <geo cert="mid">51.05 12.15</geo>
          </place>
          <place xml:id="place-49774830">
