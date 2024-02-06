@@ -8,6 +8,7 @@
                 xmlns:pages="http://www.dh.uni-wuppertal/ns/schueler/pages"
                 xmlns:path="http://www.dh.uni-wuppertal/ns/schueler/path"
                 xmlns:persons="http://www.dh.uni-wuppertal/ns/schueler/persons"
+                xmlns:local="http://www.dh.uni-wuppertal/ns/schueler/local"
                 xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xs="http://www.w3.org/2001/XMLSchema"
                 xmlns:tei="http://www.tei-c.org/ns/1.0" exclude-result-prefixes="#all" version="3.0">
     
@@ -479,6 +480,78 @@
                 select="html-components:create-footer($context, $img-path)"/>
         </xsl:call-template>
     </xsl:template>
-    
-    
+    <xsl:template match="xsl:template[@name = 'konfessionen']" name="konfessionen">
+        <xsl:param name="context" as="xs:string"/>
+        <xsl:param name="data" as="map(xs:string, document-node())"/>
+        <xsl:param name="img-path" as="xs:string"/>
+        <xsl:param name="output-dir" as="xs:string"/>
+        <xsl:param name="page" as="element(pages:page)"/>
+        <xsl:param name="pages" as="element(pages:pages)"/>
+        <xsl:param name="page-title" as="xs:string"/>
+        <xsl:param name="stylesheets" as="xs:string"/>
+        <!-- Inhalte -->
+        <xsl:call-template name="html-components:create-page">
+            <xsl:with-param name="page-head"
+                select="html-components:create-head($page-title, $context, $stylesheets)"/>
+            <xsl:with-param name="nav"
+                select="html-components:create-header-with-nav($page-title, $output-dir, $context, $pages)"/>
+            <xsl:with-param name="content" as="element(html:main)">
+                <main class="container">
+                    <h2>Konfessionen</h2>
+                    <section>
+                        <p>Die Konfessionen der Schüler sind durchgehend notiert. Es gibt in den Angaben eine Vielzahl an Bezeichnungsvarianten – z.B. 
+                        durch die Präzisierung einer staatlichen Zugehörigkeit der Kirche ("kath. preuß."). Denoch lassen sich die Angaben gut zu wenigen Gruppen zusammenfassen.</p>
+                    <!-- alle faith-Elemente werden in eine Variable eingelesen -->
+                    <xsl:variable name="faiths" as="element(tei:faith)*" select="
+                        map:for-each($data, function ($_, $value) {
+                        $value//tei:faith
+                        })"/>
+                    <xsl:variable name="konf-gesamt" select="count($faiths)"/>
+                        <!-- das Attribut n brauche ich, damit ich eine sachlich begründete Reihenfolge der Darstellung erzwingen kann 
+                        Ich hätte das gerne über das Auslesen von position() gemacht, aber das habe ich nicht hingekriegt (PS)-->
+                    <xsl:variable name="konf-label">
+                        <local:label key="ev" n="1">Evangelisch</local:label>
+                        <local:label key="luth" n="2">Lutherisch</local:label>
+                        <local:label key="ref" n="3">Reformiert</local:label>
+                        <local:label key="kath" n="4">Katholisch</local:label>
+                        <local:label key="isr" n="5">Jüdisch</local:label>
+                        <local:label key="diss" n="6">Dissident</local:label>
+                    </xsl:variable>
+                    <xsl:variable name="konfessionen">
+                        <xsl:for-each-group select="$faiths" group-by="@key">
+                            <local:konf n="{count(current-group())}" perc="{round((count(current-group()) div $konf-gesamt * 100)*100) div 100}" pos="{$konf-label/local:label[@key=current-grouping-key()]/@n}"><xsl:value-of select="$konf-label/local:label[@key=current-grouping-key()]"/></local:konf>
+                        </xsl:for-each-group>
+                    </xsl:variable>
+                    <div class="grid">
+                        <div>
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Konfession</th>
+                                        <th style="text-align:right;">Anzahl</th>
+                                        <th style="text-align:right;">Prozent</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <xsl:for-each select="$konfessionen/local:konf">
+                                    <!-- hier greift eben die Sachlogik der Sortierung. Könnte man natürlich auch nach Menge oder Alphabet machen -->
+                                    <xsl:sort select="@pos"></xsl:sort>
+                                    <tr>
+                                        <td><xsl:value-of select="."/></td>
+                                        <td style="text-align:right;"><xsl:value-of select="@n"/></td>
+                                        <td style="text-align:right;"><xsl:value-of select="@perc"/>%</td>
+                                    </tr>
+                                    </xsl:for-each>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div>hier bitte den pie chart von Bastian einbinden</div>
+                    </div>                           
+                    </section>
+                </main>
+            </xsl:with-param>
+            <xsl:with-param name="footer"
+                select="html-components:create-footer($context, $img-path)"/>
+        </xsl:call-template>        
+    </xsl:template>
 </xsl:stylesheet>
