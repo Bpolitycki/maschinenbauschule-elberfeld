@@ -68,13 +68,19 @@ p a {
   margin-bottom: 0.25rem;
 }
 
+.img-card-grid figure {
+  display: flex;
+}
+
 .img-card-grid footer {
   margin-top: 0.25rem;
 }
 
 .img-card-grid img {
   width: auto;
-  height: 45vh;
+  min-height: 15rem;
+  height: 35vh;
+  max-height: 20rem;
   margin-left: auto;
   margin-right: auto;
 }

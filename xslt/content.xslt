@@ -168,8 +168,9 @@
                         <xsl:variable name="title" as="xs:string" select="'Cover Band ' || $dep"/>
                         <xsl:variable name="volume-page" as="element(pages:page)?" select="$pages//pages:page[contains(@name, $dep)][not(@menu-only)]"/>
                         <xsl:variable name="card-img">
-                            <img class="{if (exists($volume-page)) then 'is-available' else 'not-ready'}"
-                                 src="{path:get-relative-path($context, path:join(($img-path, map:get(., 'img'))))}" alt="{$title}" title="{$title}"/>
+                            <figure><img class="{if (exists($volume-page)) then 'is-available' else 'not-ready'}"
+                                             src="{path:get-relative-path($context, path:join(($img-path, map:get(., 'img'))))}" alt="{$title}" title="{$title}"/>
+                            </figure>
                         </xsl:variable>
                         <article>
                             <header>
@@ -499,59 +500,59 @@
                 <main class="container">
                     <h2>Konfessionen</h2>
                     <section>
-                        <p>Die Konfessionen der Schüler sind durchgehend notiert. Es gibt in den Angaben eine Vielzahl an Bezeichnungsvarianten – z.B. 
-                        durch die Präzisierung einer staatlichen Zugehörigkeit der Kirche ("kath. preuß."). Denoch lassen sich die Angaben gut zu wenigen Gruppen zusammenfassen.</p>
-                    <!-- alle faith-Elemente werden in eine Variable eingelesen -->
-                    <xsl:variable name="faiths" as="element(tei:faith)*" select="
-                        map:for-each($data, function ($_, $value) {
-                        $value//tei:faith
-                        })"/>
-                    <xsl:variable name="konf-gesamt" select="count($faiths)"/>
-                        <!-- das Attribut n brauche ich, damit ich eine sachlich begründete Reihenfolge der Darstellung erzwingen kann 
-                        Ich hätte das gerne über das Auslesen von position() gemacht, aber das habe ich nicht hingekriegt (PS)-->
-                    <xsl:variable name="konf-label">
-                        <local:label key="ev" n="1">Evangelisch</local:label>
-                        <local:label key="luth" n="2">Lutherisch</local:label>
-                        <local:label key="ref" n="3">Reformiert</local:label>
-                        <local:label key="kath" n="4">Katholisch</local:label>
-                        <local:label key="isr" n="5">Jüdisch</local:label>
-                        <local:label key="diss" n="6">Dissident</local:label>
-                    </xsl:variable>
-                    <xsl:variable name="konfessionen">
-                        <xsl:for-each-group select="$faiths" group-by="@key">
-                            <local:konf n="{count(current-group())}" perc="{round((count(current-group()) div $konf-gesamt * 100)*100) div 100}" pos="{$konf-label/local:label[@key=current-grouping-key()]/@n}"><xsl:value-of select="$konf-label/local:label[@key=current-grouping-key()]"/></local:konf>
-                        </xsl:for-each-group>
-                    </xsl:variable>
-                    <div class="grid">
-                        <div>
-                            <table>
-                                <thead>
-                                    <tr>
-                                        <th>Konfession</th>
-                                        <th style="text-align:right;">Anzahl</th>
-                                        <th style="text-align:right;">Prozent</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <xsl:for-each select="$konfessionen/local:konf">
-                                    <!-- hier greift eben die Sachlogik der Sortierung. Könnte man natürlich auch nach Menge oder Alphabet machen -->
-                                    <xsl:sort select="@pos"></xsl:sort>
-                                    <tr>
-                                        <td><xsl:value-of select="."/></td>
-                                        <td style="text-align:right;"><xsl:value-of select="@n"/></td>
-                                        <td style="text-align:right;"><xsl:value-of select="@perc"/>%</td>
-                                    </tr>
-                                    </xsl:for-each>
-                                </tbody>
-                            </table>
+                        <p>Die Konfessionen der Schüler sind durchgehend notiert. Es gibt in den Angaben eine Vielzahl an Bezeichnungsvarianten – z.B.
+                            durch die Präzisierung einer staatlichen Zugehörigkeit der Kirche ("kath. preuß."). Denoch lassen sich die Angaben gut zu wenigen Gruppen zusammenfassen.</p>
+                        <!-- alle faith-Elemente werden in eine Variable eingelesen -->
+                        <xsl:variable name="faiths" as="element(tei:faith)*" select="
+                            map:for-each($data, function ($_, $value) {
+                                    $value//tei:faith
+                                })"/>
+                        <xsl:variable name="konf-gesamt" select="count($faiths)"/>
+                        <!-- das Attribut n brauche ich, damit ich eine sachlich begründete Reihenfolge der Darstellung erzwingen kann
+                             Ich hätte das gerne über das Auslesen von position() gemacht, aber das habe ich nicht hingekriegt (PS)-->
+                        <xsl:variable name="konf-label">
+                            <local:label key="ev" n="1">Evangelisch</local:label>
+                            <local:label key="luth" n="2">Lutherisch</local:label>
+                            <local:label key="ref" n="3">Reformiert</local:label>
+                            <local:label key="kath" n="4">Katholisch</local:label>
+                            <local:label key="isr" n="5">Jüdisch</local:label>
+                            <local:label key="diss" n="6">Dissident</local:label>
+                        </xsl:variable>
+                        <xsl:variable name="konfessionen">
+                            <xsl:for-each-group select="$faiths" group-by="@key">
+                                <local:konf n="{count(current-group())}" perc="{round((count(current-group()) div $konf-gesamt * 100)*100) div 100}" pos="{$konf-label/local:label[@key=current-grouping-key()]/@n}"><xsl:value-of select="$konf-label/local:label[@key=current-grouping-key()]"/></local:konf>
+                            </xsl:for-each-group>
+                        </xsl:variable>
+                        <div class="grid">
+                            <div>
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Konfession</th>
+                                            <th style="text-align:right;">Anzahl</th>
+                                            <th style="text-align:right;">Prozent</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <xsl:for-each select="$konfessionen/local:konf">
+                                            <!-- hier greift eben die Sachlogik der Sortierung. Könnte man natürlich auch nach Menge oder Alphabet machen -->
+                                            <xsl:sort select="@pos"></xsl:sort>
+                                            <tr>
+                                                <td><xsl:value-of select="."/></td>
+                                                <td style="text-align:right;"><xsl:value-of select="@n"/></td>
+                                                <td style="text-align:right;"><xsl:value-of select="@perc"/>%</td>
+                                            </tr>
+                                        </xsl:for-each>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div>hier bitte den pie chart von Bastian einbinden</div>
                         </div>
-                        <div>hier bitte den pie chart von Bastian einbinden</div>
-                    </div>                           
                     </section>
                 </main>
             </xsl:with-param>
             <xsl:with-param name="footer"
                 select="html-components:create-footer($context, $img-path)"/>
-        </xsl:call-template>        
+        </xsl:call-template>
     </xsl:template>
 </xsl:stylesheet>
